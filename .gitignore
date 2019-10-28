@@ -1,0 +1,9 @@
+*.pyc
+__pycache__/
+results/
+.tmp/*
+data/datasets/*
+*.pth
+!data/weights/resnet14_mnist.pth
+!data/weights/resnet14_cifar.pth
+nohup.out
