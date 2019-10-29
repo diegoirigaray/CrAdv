@@ -1,0 +1,1006 @@
+{
+    "task_data": {
+        "task_name": "samples",
+        "skip_no_attack": true,
+        "exec_multi": true,
+        "task_params": {
+            "limit_samples": 32
+        },
+        "attack_on_defense": true,
+        "plot_results": false,
+        "plot_keys": [],
+        "plot_together": true,
+        "skip_no_defense": false,
+        "skip_no_attack_variables": false
+    },
+    "net_data": {
+        "model_name": "resnet50",
+        "datasource_name": "imagenet",
+        "net_id": "resnet50",
+        "datasource_params": {
+            "path": "/media/diegoirigaray/38F686EEF686ABA6/Diego/Facultad/ILSVRC2012_img_val",
+            "batch_size": 4
+        },
+        "model_params": {}
+    },
+    "attack_data": null,
+    "defense_data": null,
+    "exec_time": "0h 0m 27s",
+    "result": {
+        "samples_fgsm": {
+            "correct": 6,
+            "samples": [
+                {
+                    "index": 1,
+                    "original_label": "goblet",
+                    "clean_confidence": "90.89%",
+                    "adversary_label": "cornet, horn, trumpet, trump",
+                    "adversary_confidence": "21.44%",
+                    "pert_norm_0": 150528.0,
+                    "pert_norm_2": 23.3891544342041,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 2,
+                    "original_label": "fly",
+                    "clean_confidence": "99.98%",
+                    "adversary_label": "cicada, cicala",
+                    "adversary_confidence": "79.15%",
+                    "pert_norm_0": 150510.0,
+                    "pert_norm_2": 24.247013092041016,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 3,
+                    "original_label": "medicine chest, medicine cabinet",
+                    "clean_confidence": "90.27%",
+                    "adversary_label": "shower curtain",
+                    "adversary_confidence": "20.72%",
+                    "pert_norm_0": 150518.0,
+                    "pert_norm_2": 24.20478057861328,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 4,
+                    "original_label": "hummingbird",
+                    "clean_confidence": "99.97%",
+                    "adversary_label": "hummingbird",
+                    "adversary_confidence": "98.81%",
+                    "pert_norm_0": 150525.0,
+                    "pert_norm_2": 24.234466552734375,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 5,
+                    "original_label": "measuring cup",
+                    "clean_confidence": "37.73%",
+                    "adversary_label": "crash helmet",
+                    "adversary_confidence": "42.22%",
+                    "pert_norm_0": 149045.0,
+                    "pert_norm_2": 23.294841766357422,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 6,
+                    "original_label": "gazelle",
+                    "clean_confidence": "73.60%",
+                    "adversary_label": "gazelle",
+                    "adversary_confidence": "45.14%",
+                    "pert_norm_0": 150528.0,
+                    "pert_norm_2": 24.33395004272461,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 7,
+                    "original_label": "Rhodesian ridgeback",
+                    "clean_confidence": "65.11%",
+                    "adversary_label": "Irish terrier",
+                    "adversary_confidence": "36.69%",
+                    "pert_norm_0": 149656.0,
+                    "pert_norm_2": 23.39243507385254,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 8,
+                    "original_label": "electric locomotive",
+                    "clean_confidence": "56.06%",
+                    "adversary_label": "electric locomotive",
+                    "adversary_confidence": "35.79%",
+                    "pert_norm_0": 149999.0,
+                    "pert_norm_2": 23.61964225769043,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 9,
+                    "original_label": "Welsh springer spaniel",
+                    "clean_confidence": "92.69%",
+                    "adversary_label": "Blenheim spaniel",
+                    "adversary_confidence": "7.32%",
+                    "pert_norm_0": 150521.0,
+                    "pert_norm_2": 24.275033950805664,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 10,
+                    "original_label": "groenendael",
+                    "clean_confidence": "30.28%",
+                    "adversary_label": "Labrador retriever",
+                    "adversary_confidence": "22.74%",
+                    "pert_norm_0": 150528.0,
+                    "pert_norm_2": 24.183874130249023,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 11,
+                    "original_label": "flatworm, platyhelminth",
+                    "clean_confidence": "94.78%",
+                    "adversary_label": "sea slug, nudibranch",
+                    "adversary_confidence": "34.12%",
+                    "pert_norm_0": 150528.0,
+                    "pert_norm_2": 24.218252182006836,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 12,
+                    "original_label": "shoe shop, shoe-shop, shoe store",
+                    "clean_confidence": "89.76%",
+                    "adversary_label": "mushroom",
+                    "adversary_confidence": "16.75%",
+                    "pert_norm_0": 150510.0,
+                    "pert_norm_2": 23.598146438598633,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 13,
+                    "original_label": "odometer, hodometer, mileometer, milometer",
+                    "clean_confidence": "100.00%",
+                    "adversary_label": "odometer, hodometer, mileometer, milometer",
+                    "adversary_confidence": "91.30%",
+                    "pert_norm_0": 150526.0,
+                    "pert_norm_2": 24.13850212097168,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 14,
+                    "original_label": "common newt, Triturus vulgaris",
+                    "clean_confidence": "98.36%",
+                    "adversary_label": "European fire salamander, Salamandra salamandra",
+                    "adversary_confidence": "87.45%",
+                    "pert_norm_0": 149779.0,
+                    "pert_norm_2": 23.67966079711914,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 15,
+                    "original_label": "dogsled, dog sled, dog sleigh",
+                    "clean_confidence": "89.79%",
+                    "adversary_label": "Eskimo dog, husky",
+                    "adversary_confidence": "26.30%",
+                    "pert_norm_0": 150218.0,
+                    "pert_norm_2": 24.07476043701172,
+                    "pert_norm_inf": 0.06358355283737183
+                },
+                {
+                    "index": 16,
+                    "original_label": "armadillo",
+                    "clean_confidence": "99.99%",
+                    "adversary_label": "peacock",
+                    "adversary_confidence": "30.91%",
+                    "pert_norm_0": 150477.0,
+                    "pert_norm_2": 24.257184982299805,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 17,
+                    "original_label": "Pekinese, Pekingese, Peke",
+                    "clean_confidence": "88.49%",
+                    "adversary_label": "Pekinese, Pekingese, Peke",
+                    "adversary_confidence": "96.87%",
+                    "pert_norm_0": 150144.0,
+                    "pert_norm_2": 23.610666275024414,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 18,
+                    "original_label": "web site, website, internet site, site",
+                    "clean_confidence": "99.81%",
+                    "adversary_label": "menu",
+                    "adversary_confidence": "38.08%",
+                    "pert_norm_0": 128625.0,
+                    "pert_norm_2": 21.004608154296875,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 19,
+                    "original_label": "Rhodesian ridgeback",
+                    "clean_confidence": "60.69%",
+                    "adversary_label": "Chihuahua",
+                    "adversary_confidence": "21.86%",
+                    "pert_norm_0": 150521.0,
+                    "pert_norm_2": 24.12506103515625,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 20,
+                    "original_label": "crate",
+                    "clean_confidence": "95.97%",
+                    "adversary_label": "carton",
+                    "adversary_confidence": "26.80%",
+                    "pert_norm_0": 150528.0,
+                    "pert_norm_2": 24.19258689880371,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 21,
+                    "original_label": "toilet tissue, toilet paper, bathroom tissue",
+                    "clean_confidence": "44.00%",
+                    "adversary_label": "prison, prison house",
+                    "adversary_confidence": "79.98%",
+                    "pert_norm_0": 150382.0,
+                    "pert_norm_2": 24.225448608398438,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 22,
+                    "original_label": "Saluki, gazelle hound",
+                    "clean_confidence": "44.08%",
+                    "adversary_label": "Doberman, Doberman pinscher",
+                    "adversary_confidence": "47.29%",
+                    "pert_norm_0": 150528.0,
+                    "pert_norm_2": 24.257596969604492,
+                    "pert_norm_inf": 0.06358355283737183
+                },
+                {
+                    "index": 23,
+                    "original_label": "punching bag, punch bag, punching ball, punchball",
+                    "clean_confidence": "84.47%",
+                    "adversary_label": "unicycle, monocycle",
+                    "adversary_confidence": "15.22%",
+                    "pert_norm_0": 150526.0,
+                    "pert_norm_2": 24.268972396850586,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 24,
+                    "original_label": "laptop, laptop computer",
+                    "clean_confidence": "46.72%",
+                    "adversary_label": "prayer rug, prayer mat",
+                    "adversary_confidence": "46.56%",
+                    "pert_norm_0": 150482.0,
+                    "pert_norm_2": 24.257286071777344,
+                    "pert_norm_inf": 0.06358355283737183
+                },
+                {
+                    "index": 25,
+                    "original_label": "squirrel monkey, Saimiri sciureus",
+                    "clean_confidence": "47.75%",
+                    "adversary_label": "squirrel monkey, Saimiri sciureus",
+                    "adversary_confidence": "84.98%",
+                    "pert_norm_0": 149525.0,
+                    "pert_norm_2": 23.49489974975586,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 26,
+                    "original_label": "gyromitra",
+                    "clean_confidence": "99.80%",
+                    "adversary_label": "coral reef",
+                    "adversary_confidence": "41.58%",
+                    "pert_norm_0": 149942.0,
+                    "pert_norm_2": 23.65327262878418,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 27,
+                    "original_label": "jaguar, panther, Panthera onca, Felis onca",
+                    "clean_confidence": "98.40%",
+                    "adversary_label": "cheetah, chetah, Acinonyx jubatus",
+                    "adversary_confidence": "52.02%",
+                    "pert_norm_0": 150501.0,
+                    "pert_norm_2": 24.270170211791992,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 28,
+                    "original_label": "eggnog",
+                    "clean_confidence": "38.39%",
+                    "adversary_label": "cup",
+                    "adversary_confidence": "35.26%",
+                    "pert_norm_0": 149887.0,
+                    "pert_norm_2": 23.086565017700195,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 29,
+                    "original_label": "unicycle, monocycle",
+                    "clean_confidence": "99.77%",
+                    "adversary_label": "tripod",
+                    "adversary_confidence": "80.26%",
+                    "pert_norm_0": 147069.0,
+                    "pert_norm_2": 23.40180778503418,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 30,
+                    "original_label": "padlock",
+                    "clean_confidence": "91.40%",
+                    "adversary_label": "bolo tie, bolo, bola tie, bola",
+                    "adversary_confidence": "63.36%",
+                    "pert_norm_0": 145692.0,
+                    "pert_norm_2": 23.5539608001709,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 31,
+                    "original_label": "black-footed ferret, ferret, Mustela nigripes",
+                    "clean_confidence": "46.93%",
+                    "adversary_label": "badger",
+                    "adversary_confidence": "25.18%",
+                    "pert_norm_0": 149317.0,
+                    "pert_norm_2": 24.007003784179688,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 32,
+                    "original_label": "ski mask",
+                    "clean_confidence": "52.90%",
+                    "adversary_label": "football helmet",
+                    "adversary_confidence": "99.36%",
+                    "pert_norm_0": 150143.0,
+                    "pert_norm_2": 24.000347137451172,
+                    "pert_norm_inf": 0.0635836124420166
+                }
+            ]
+        },
+        "samples_i_fgsm": {
+            "correct": 0,
+            "samples": [
+                {
+                    "index": 1,
+                    "original_label": "goblet",
+                    "clean_confidence": "90.89%",
+                    "adversary_label": "maraca",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 115418.0,
+                    "pert_norm_2": 9.384033203125,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 2,
+                    "original_label": "fly",
+                    "clean_confidence": "99.98%",
+                    "adversary_label": "cicada, cicala",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 116030.0,
+                    "pert_norm_2": 9.85542106628418,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 3,
+                    "original_label": "medicine chest, medicine cabinet",
+                    "clean_confidence": "90.27%",
+                    "adversary_label": "soap dispenser",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 113317.0,
+                    "pert_norm_2": 9.465086936950684,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 4,
+                    "original_label": "hummingbird",
+                    "clean_confidence": "99.97%",
+                    "adversary_label": "magpie",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 114775.0,
+                    "pert_norm_2": 9.527612686157227,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 5,
+                    "original_label": "measuring cup",
+                    "clean_confidence": "37.73%",
+                    "adversary_label": "wok",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 116129.0,
+                    "pert_norm_2": 9.401837348937988,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 6,
+                    "original_label": "gazelle",
+                    "clean_confidence": "73.60%",
+                    "adversary_label": "warthog",
+                    "adversary_confidence": "99.99%",
+                    "pert_norm_0": 114609.0,
+                    "pert_norm_2": 9.495933532714844,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 7,
+                    "original_label": "Rhodesian ridgeback",
+                    "clean_confidence": "65.11%",
+                    "adversary_label": "Chihuahua",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 116740.0,
+                    "pert_norm_2": 9.379790306091309,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 8,
+                    "original_label": "electric locomotive",
+                    "clean_confidence": "56.06%",
+                    "adversary_label": "passenger car, coach, carriage",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 117789.0,
+                    "pert_norm_2": 9.909871101379395,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 9,
+                    "original_label": "Welsh springer spaniel",
+                    "clean_confidence": "92.69%",
+                    "adversary_label": "kuvasz",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 114844.0,
+                    "pert_norm_2": 9.591769218444824,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 10,
+                    "original_label": "groenendael",
+                    "clean_confidence": "30.28%",
+                    "adversary_label": "miniature pinscher",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 113434.0,
+                    "pert_norm_2": 9.422560691833496,
+                    "pert_norm_inf": 0.06358355283737183
+                },
+                {
+                    "index": 11,
+                    "original_label": "flatworm, platyhelminth",
+                    "clean_confidence": "94.78%",
+                    "adversary_label": "sea slug, nudibranch",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 114120.0,
+                    "pert_norm_2": 9.529534339904785,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 12,
+                    "original_label": "shoe shop, shoe-shop, shoe store",
+                    "clean_confidence": "89.76%",
+                    "adversary_label": "torch",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 116027.0,
+                    "pert_norm_2": 9.605341911315918,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 13,
+                    "original_label": "odometer, hodometer, mileometer, milometer",
+                    "clean_confidence": "100.00%",
+                    "adversary_label": "stopwatch, stop watch",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 116997.0,
+                    "pert_norm_2": 9.931528091430664,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 14,
+                    "original_label": "common newt, Triturus vulgaris",
+                    "clean_confidence": "98.36%",
+                    "adversary_label": "spotted salamander, Ambystoma maculatum",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 115759.0,
+                    "pert_norm_2": 9.535710334777832,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 15,
+                    "original_label": "dogsled, dog sled, dog sleigh",
+                    "clean_confidence": "89.79%",
+                    "adversary_label": "malamute, malemute, Alaskan malamute",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 114596.0,
+                    "pert_norm_2": 9.519567489624023,
+                    "pert_norm_inf": 0.06358355283737183
+                },
+                {
+                    "index": 16,
+                    "original_label": "armadillo",
+                    "clean_confidence": "99.99%",
+                    "adversary_label": "perfume, essence",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 116548.0,
+                    "pert_norm_2": 9.888711929321289,
+                    "pert_norm_inf": 0.06358355283737183
+                },
+                {
+                    "index": 17,
+                    "original_label": "Pekinese, Pekingese, Peke",
+                    "clean_confidence": "88.49%",
+                    "adversary_label": "Japanese spaniel",
+                    "adversary_confidence": "99.97%",
+                    "pert_norm_0": 113965.0,
+                    "pert_norm_2": 9.145771980285645,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 18,
+                    "original_label": "web site, website, internet site, site",
+                    "clean_confidence": "99.81%",
+                    "adversary_label": "menu",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 118580.0,
+                    "pert_norm_2": 9.211219787597656,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 19,
+                    "original_label": "Rhodesian ridgeback",
+                    "clean_confidence": "60.69%",
+                    "adversary_label": "beagle",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 115567.0,
+                    "pert_norm_2": 9.539769172668457,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 20,
+                    "original_label": "crate",
+                    "clean_confidence": "95.97%",
+                    "adversary_label": "teddy, teddy bear",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 113668.0,
+                    "pert_norm_2": 9.464183807373047,
+                    "pert_norm_inf": 0.06358355283737183
+                },
+                {
+                    "index": 21,
+                    "original_label": "toilet tissue, toilet paper, bathroom tissue",
+                    "clean_confidence": "44.00%",
+                    "adversary_label": "window screen",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 114060.0,
+                    "pert_norm_2": 9.387048721313477,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 22,
+                    "original_label": "Saluki, gazelle hound",
+                    "clean_confidence": "44.08%",
+                    "adversary_label": "curly-coated retriever",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 114796.0,
+                    "pert_norm_2": 9.413278579711914,
+                    "pert_norm_inf": 0.06358355283737183
+                },
+                {
+                    "index": 23,
+                    "original_label": "punching bag, punch bag, punching ball, punchball",
+                    "clean_confidence": "84.47%",
+                    "adversary_label": "oxygen mask",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 114613.0,
+                    "pert_norm_2": 9.701849937438965,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 24,
+                    "original_label": "laptop, laptop computer",
+                    "clean_confidence": "46.72%",
+                    "adversary_label": "monitor",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 113782.0,
+                    "pert_norm_2": 9.39846134185791,
+                    "pert_norm_inf": 0.06358355283737183
+                },
+                {
+                    "index": 25,
+                    "original_label": "squirrel monkey, Saimiri sciureus",
+                    "clean_confidence": "47.75%",
+                    "adversary_label": "Madagascar cat, ring-tailed lemur, Lemur catta",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 115383.0,
+                    "pert_norm_2": 9.34116268157959,
+                    "pert_norm_inf": 0.06358355283737183
+                },
+                {
+                    "index": 26,
+                    "original_label": "gyromitra",
+                    "clean_confidence": "99.80%",
+                    "adversary_label": "conch",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 117224.0,
+                    "pert_norm_2": 9.916518211364746,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 27,
+                    "original_label": "jaguar, panther, Panthera onca, Felis onca",
+                    "clean_confidence": "98.40%",
+                    "adversary_label": "leopard, Panthera pardus",
+                    "adversary_confidence": "99.99%",
+                    "pert_norm_0": 115558.0,
+                    "pert_norm_2": 9.777950286865234,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 28,
+                    "original_label": "eggnog",
+                    "clean_confidence": "38.39%",
+                    "adversary_label": "trifle",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 116584.0,
+                    "pert_norm_2": 9.544713973999023,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 29,
+                    "original_label": "unicycle, monocycle",
+                    "clean_confidence": "99.77%",
+                    "adversary_label": "corn",
+                    "adversary_confidence": "64.01%",
+                    "pert_norm_0": 114708.0,
+                    "pert_norm_2": 9.293932914733887,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 30,
+                    "original_label": "padlock",
+                    "clean_confidence": "91.40%",
+                    "adversary_label": "pick, plectrum, plectron",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 117608.0,
+                    "pert_norm_2": 9.655658721923828,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 31,
+                    "original_label": "black-footed ferret, ferret, Mustela nigripes",
+                    "clean_confidence": "46.93%",
+                    "adversary_label": "badger",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 115278.0,
+                    "pert_norm_2": 9.50660514831543,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 32,
+                    "original_label": "ski mask",
+                    "clean_confidence": "52.90%",
+                    "adversary_label": "football helmet",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 114955.0,
+                    "pert_norm_2": 9.602249145507812,
+                    "pert_norm_inf": 0.0635836124420166
+                }
+            ]
+        },
+        "samples_mi_fgsm": {
+            "correct": 0,
+            "samples": [
+                {
+                    "index": 1,
+                    "original_label": "goblet",
+                    "clean_confidence": "90.89%",
+                    "adversary_label": "maraca",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 146305.0,
+                    "pert_norm_2": 16.6695556640625,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 2,
+                    "original_label": "fly",
+                    "clean_confidence": "99.98%",
+                    "adversary_label": "cicada, cicala",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 146558.0,
+                    "pert_norm_2": 17.291257858276367,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 3,
+                    "original_label": "medicine chest, medicine cabinet",
+                    "clean_confidence": "90.27%",
+                    "adversary_label": "soap dispenser",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 146497.0,
+                    "pert_norm_2": 17.18488883972168,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 4,
+                    "original_label": "hummingbird",
+                    "clean_confidence": "99.97%",
+                    "adversary_label": "magpie",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 146111.0,
+                    "pert_norm_2": 17.21752166748047,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 5,
+                    "original_label": "measuring cup",
+                    "clean_confidence": "37.73%",
+                    "adversary_label": "wok",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 145160.0,
+                    "pert_norm_2": 16.420093536376953,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 6,
+                    "original_label": "gazelle",
+                    "clean_confidence": "73.60%",
+                    "adversary_label": "warthog",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 146317.0,
+                    "pert_norm_2": 17.046417236328125,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 7,
+                    "original_label": "Rhodesian ridgeback",
+                    "clean_confidence": "65.11%",
+                    "adversary_label": "Chihuahua",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 145953.0,
+                    "pert_norm_2": 16.48920440673828,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 8,
+                    "original_label": "electric locomotive",
+                    "clean_confidence": "56.06%",
+                    "adversary_label": "passenger car, coach, carriage",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 146704.0,
+                    "pert_norm_2": 16.79755973815918,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 9,
+                    "original_label": "Welsh springer spaniel",
+                    "clean_confidence": "92.69%",
+                    "adversary_label": "miniature poodle",
+                    "adversary_confidence": "96.11%",
+                    "pert_norm_0": 146694.0,
+                    "pert_norm_2": 16.949033737182617,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 10,
+                    "original_label": "groenendael",
+                    "clean_confidence": "30.28%",
+                    "adversary_label": "miniature pinscher",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 146585.0,
+                    "pert_norm_2": 17.136688232421875,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 11,
+                    "original_label": "flatworm, platyhelminth",
+                    "clean_confidence": "94.78%",
+                    "adversary_label": "sea slug, nudibranch",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 146457.0,
+                    "pert_norm_2": 17.1827392578125,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 12,
+                    "original_label": "shoe shop, shoe-shop, shoe store",
+                    "clean_confidence": "89.76%",
+                    "adversary_label": "torch",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 146679.0,
+                    "pert_norm_2": 16.557655334472656,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 13,
+                    "original_label": "odometer, hodometer, mileometer, milometer",
+                    "clean_confidence": "100.00%",
+                    "adversary_label": "stopwatch, stop watch",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 146633.0,
+                    "pert_norm_2": 17.084766387939453,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 14,
+                    "original_label": "common newt, Triturus vulgaris",
+                    "clean_confidence": "98.36%",
+                    "adversary_label": "spotted salamander, Ambystoma maculatum",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 146082.0,
+                    "pert_norm_2": 16.930156707763672,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 15,
+                    "original_label": "dogsled, dog sled, dog sleigh",
+                    "clean_confidence": "89.79%",
+                    "adversary_label": "malamute, malemute, Alaskan malamute",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 145793.0,
+                    "pert_norm_2": 16.923654556274414,
+                    "pert_norm_inf": 0.06358355283737183
+                },
+                {
+                    "index": 16,
+                    "original_label": "armadillo",
+                    "clean_confidence": "99.99%",
+                    "adversary_label": "bubble",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 146695.0,
+                    "pert_norm_2": 17.209802627563477,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 17,
+                    "original_label": "Pekinese, Pekingese, Peke",
+                    "clean_confidence": "88.49%",
+                    "adversary_label": "Japanese spaniel",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 145932.0,
+                    "pert_norm_2": 16.632789611816406,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 18,
+                    "original_label": "web site, website, internet site, site",
+                    "clean_confidence": "99.81%",
+                    "adversary_label": "menu",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 125704.0,
+                    "pert_norm_2": 15.03561782836914,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 19,
+                    "original_label": "Rhodesian ridgeback",
+                    "clean_confidence": "60.69%",
+                    "adversary_label": "beagle",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 146874.0,
+                    "pert_norm_2": 17.067155838012695,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 20,
+                    "original_label": "crate",
+                    "clean_confidence": "95.97%",
+                    "adversary_label": "teddy, teddy bear",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 146450.0,
+                    "pert_norm_2": 17.073270797729492,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 21,
+                    "original_label": "toilet tissue, toilet paper, bathroom tissue",
+                    "clean_confidence": "44.00%",
+                    "adversary_label": "window shade",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 145928.0,
+                    "pert_norm_2": 16.95064353942871,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 22,
+                    "original_label": "Saluki, gazelle hound",
+                    "clean_confidence": "44.08%",
+                    "adversary_label": "curly-coated retriever",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 146285.0,
+                    "pert_norm_2": 17.07451820373535,
+                    "pert_norm_inf": 0.06358355283737183
+                },
+                {
+                    "index": 23,
+                    "original_label": "punching bag, punch bag, punching ball, punchball",
+                    "clean_confidence": "84.47%",
+                    "adversary_label": "oxygen mask",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 146386.0,
+                    "pert_norm_2": 17.0948543548584,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 24,
+                    "original_label": "laptop, laptop computer",
+                    "clean_confidence": "46.72%",
+                    "adversary_label": "monitor",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 145940.0,
+                    "pert_norm_2": 16.923572540283203,
+                    "pert_norm_inf": 0.06358355283737183
+                },
+                {
+                    "index": 25,
+                    "original_label": "squirrel monkey, Saimiri sciureus",
+                    "clean_confidence": "47.75%",
+                    "adversary_label": "Madagascar cat, ring-tailed lemur, Lemur catta",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 145271.0,
+                    "pert_norm_2": 16.524839401245117,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 26,
+                    "original_label": "gyromitra",
+                    "clean_confidence": "99.80%",
+                    "adversary_label": "conch",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 146203.0,
+                    "pert_norm_2": 16.728551864624023,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 27,
+                    "original_label": "jaguar, panther, Panthera onca, Felis onca",
+                    "clean_confidence": "98.40%",
+                    "adversary_label": "leopard, Panthera pardus",
+                    "adversary_confidence": "99.94%",
+                    "pert_norm_0": 147083.0,
+                    "pert_norm_2": 17.24831199645996,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 28,
+                    "original_label": "eggnog",
+                    "clean_confidence": "38.39%",
+                    "adversary_label": "trifle",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 146112.0,
+                    "pert_norm_2": 16.37842559814453,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 29,
+                    "original_label": "unicycle, monocycle",
+                    "clean_confidence": "99.77%",
+                    "adversary_label": "corn",
+                    "adversary_confidence": "87.16%",
+                    "pert_norm_0": 143235.0,
+                    "pert_norm_2": 16.421249389648438,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 30,
+                    "original_label": "padlock",
+                    "clean_confidence": "91.40%",
+                    "adversary_label": "pick, plectrum, plectron",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 141742.0,
+                    "pert_norm_2": 16.644004821777344,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 31,
+                    "original_label": "black-footed ferret, ferret, Mustela nigripes",
+                    "clean_confidence": "46.93%",
+                    "adversary_label": "badger",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 145650.0,
+                    "pert_norm_2": 16.87133026123047,
+                    "pert_norm_inf": 0.0635836124420166
+                },
+                {
+                    "index": 32,
+                    "original_label": "ski mask",
+                    "clean_confidence": "52.90%",
+                    "adversary_label": "football helmet",
+                    "adversary_confidence": "100.00%",
+                    "pert_norm_0": 145745.0,
+                    "pert_norm_2": 16.83060646057129,
+                    "pert_norm_inf": 0.0635836124420166
+                }
+            ]
+        }
+    }
+}

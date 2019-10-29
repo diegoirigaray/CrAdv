@@ -1,0 +1,93 @@
+{
+    "config": {
+      "batch_size_factor": 2,
+      "multi_gpu": true,
+      "device_ids": ["cuda:0", "cuda:1"]
+    },
+    "tasks": [
+      {
+        "task_data": {
+          "task_name": "accuracy",
+          "skip_no_attack": true,
+          "task_params": {
+            "limit_samples": 10000
+          },
+          "description": "Accuracy base para deepfool y fgsm con parametros por defecto en mnist."
+        },
+        "nets": [
+          {
+            "model_name": "resnet14_mnist",
+            "datasource_name": "mnist",
+            "net_id": "resnet14_mnist",
+            "datasource_params": {
+              "batch_size": 100
+            }
+      }
+        ],
+        "attacks": [
+          {"attack_name": "fgsm",
+           "attack_params": {"eps" : 0.4}
+          },        
+          {"attack_name": "deepfool"
+          }
+        ]
+      },
+      {
+          "task_data": {
+            "task_name": "accuracy",
+            "skip_no_attack": true,
+            "task_params": {
+              "limit_samples": 10000
+            },
+            "description": "Accuracy base para deepfool y fgsm con parametros por defecto en cifar."
+          },
+          "nets": [
+            {
+              "model_name": "resnet14_cifar",
+              "datasource_name": "cifar10",
+              "net_id": "resnet14_cifar",
+              "datasource_params": {
+                "batch_size": 100
+              }
+        }
+          ],
+          "attacks": [
+            {"attack_name": "fgsm",
+             "attack_params": {"eps" : 0.12}
+            },        
+            {"attack_name": "deepfool"
+            }
+          ]
+        },
+        {
+          "task_data": {
+            "task_name": "accuracy",
+            "skip_no_attack": true,
+            "task_params": {
+              "limit_samples": 10000
+            },
+            "description": "Accuracy base para deepfool y fgsm con parametros por defecto en Imagenet."
+          },
+          "nets": [
+            {
+              "model_name": "resnet50",
+              "datasource_name": "imagenet",
+              "datasource_params": {
+                "batch_size": 50,
+                "shuffle": false
+              },
+              "net_id": "resnet50"
+            }
+          ],
+          "attacks": [
+            {"attack_name": "fgsm",
+             "attack_params": {"eps" : 0.075}
+            },        
+            {"attack_name": "deepfool"
+            }
+          ]
+        }
+    ]
+}
+  
+  

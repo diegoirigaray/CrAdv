@@ -1,0 +1,361 @@
+{
+    "task_data": {
+        "task_name": "samples",
+        "skip_no_attack": true,
+        "task_params": {
+            "limit_samples": 32
+        },
+        "exec_multi": false,
+        "attack_on_defense": true,
+        "plot_results": false,
+        "plot_keys": [],
+        "plot_together": true,
+        "skip_no_defense": false,
+        "skip_no_attack_variables": false
+    },
+    "net_data": {
+        "model_name": "resnet14_cifar",
+        "datasource_name": "cifar10",
+        "net_id": "resnet14_cifar",
+        "datasource_params": {
+            "batch_size": 16
+        },
+        "model_params": {}
+    },
+    "attack_data": {
+        "attack_name": "fgsm",
+        "attack_params": {
+            "eps": 0.2
+        },
+        "except_variables": [],
+        "on_task_model": true
+    },
+    "defense_data": null,
+    "exec_time": "0h 0m 0s",
+    "result": {
+        "total": 32,
+        "correct": 2,
+        "samples": [
+            {
+                "index": 1,
+                "original_label": "truck",
+                "clean_confidence": "94.41%",
+                "adversary_label": "truck",
+                "adversary_confidence": "99.70%",
+                "pert_norm_0": 3071.0,
+                "pert_norm_2": 5.410332202911377,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 2,
+                "original_label": "cat",
+                "clean_confidence": "38.62%",
+                "adversary_label": "frog",
+                "adversary_confidence": "67.84%",
+                "pert_norm_0": 3068.0,
+                "pert_norm_2": 5.509157657623291,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 3,
+                "original_label": "horse",
+                "clean_confidence": "88.31%",
+                "adversary_label": "deer",
+                "adversary_confidence": "47.94%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.500760555267334,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 4,
+                "original_label": "dog",
+                "clean_confidence": "71.69%",
+                "adversary_label": "frog",
+                "adversary_confidence": "65.57%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.501245498657227,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 5,
+                "original_label": "truck",
+                "clean_confidence": "96.59%",
+                "adversary_label": "automobile",
+                "adversary_confidence": "99.68%",
+                "pert_norm_0": 2990.0,
+                "pert_norm_2": 5.246272563934326,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 6,
+                "original_label": "bird",
+                "clean_confidence": "85.35%",
+                "adversary_label": "frog",
+                "adversary_confidence": "99.88%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.534780979156494,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 7,
+                "original_label": "automobile",
+                "clean_confidence": "96.97%",
+                "adversary_label": "frog",
+                "adversary_confidence": "31.79%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.4991984367370605,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 8,
+                "original_label": "ship",
+                "clean_confidence": "47.23%",
+                "adversary_label": "bird",
+                "adversary_confidence": "64.92%",
+                "pert_norm_0": 3051.0,
+                "pert_norm_2": 5.166418075561523,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 9,
+                "original_label": "horse",
+                "clean_confidence": "100.00%",
+                "adversary_label": "frog",
+                "adversary_confidence": "41.17%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.542562484741211,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 10,
+                "original_label": "deer",
+                "clean_confidence": "54.18%",
+                "adversary_label": "deer",
+                "adversary_confidence": "69.85%",
+                "pert_norm_0": 3063.0,
+                "pert_norm_2": 5.420935153961182,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 11,
+                "original_label": "truck",
+                "clean_confidence": "47.69%",
+                "adversary_label": "frog",
+                "adversary_confidence": "54.58%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.52838659286499,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 12,
+                "original_label": "truck",
+                "clean_confidence": "99.41%",
+                "adversary_label": "frog",
+                "adversary_confidence": "57.22%",
+                "pert_norm_0": 3067.0,
+                "pert_norm_2": 5.467062950134277,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 13,
+                "original_label": "deer",
+                "clean_confidence": "76.11%",
+                "adversary_label": "frog",
+                "adversary_confidence": "90.75%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.539531230926514,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 14,
+                "original_label": "airplane",
+                "clean_confidence": "99.33%",
+                "adversary_label": "frog",
+                "adversary_confidence": "41.70%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.52647066116333,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 15,
+                "original_label": "cat",
+                "clean_confidence": "90.28%",
+                "adversary_label": "deer",
+                "adversary_confidence": "63.02%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.542562484741211,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 16,
+                "original_label": "airplane",
+                "clean_confidence": "98.11%",
+                "adversary_label": "ship",
+                "adversary_confidence": "62.05%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.494008541107178,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 17,
+                "original_label": "airplane",
+                "clean_confidence": "99.66%",
+                "adversary_label": "frog",
+                "adversary_confidence": "60.20%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.517411231994629,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 18,
+                "original_label": "ship",
+                "clean_confidence": "99.92%",
+                "adversary_label": "truck",
+                "adversary_confidence": "70.38%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.330786228179932,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 19,
+                "original_label": "horse",
+                "clean_confidence": "73.94%",
+                "adversary_label": "frog",
+                "adversary_confidence": "36.36%",
+                "pert_norm_0": 3059.0,
+                "pert_norm_2": 5.261760234832764,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 20,
+                "original_label": "frog",
+                "clean_confidence": "95.26%",
+                "adversary_label": "cat",
+                "adversary_confidence": "87.22%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.5272345542907715,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 21,
+                "original_label": "airplane",
+                "clean_confidence": "98.63%",
+                "adversary_label": "deer",
+                "adversary_confidence": "66.41%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.442523956298828,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 22,
+                "original_label": "ship",
+                "clean_confidence": "85.16%",
+                "adversary_label": "frog",
+                "adversary_confidence": "83.43%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.542562484741211,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 23,
+                "original_label": "cat",
+                "clean_confidence": "34.62%",
+                "adversary_label": "frog",
+                "adversary_confidence": "70.11%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.501709461212158,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 24,
+                "original_label": "cat",
+                "clean_confidence": "96.46%",
+                "adversary_label": "bird",
+                "adversary_confidence": "46.79%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.520908832550049,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 25,
+                "original_label": "horse",
+                "clean_confidence": "79.82%",
+                "adversary_label": "deer",
+                "adversary_confidence": "84.57%",
+                "pert_norm_0": 3070.0,
+                "pert_norm_2": 5.518527984619141,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 26,
+                "original_label": "truck",
+                "clean_confidence": "83.68%",
+                "adversary_label": "frog",
+                "adversary_confidence": "33.43%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.421239852905273,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 27,
+                "original_label": "frog",
+                "clean_confidence": "89.42%",
+                "adversary_label": "deer",
+                "adversary_confidence": "51.54%",
+                "pert_norm_0": 3007.0,
+                "pert_norm_2": 5.234690189361572,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 28,
+                "original_label": "dog",
+                "clean_confidence": "55.60%",
+                "adversary_label": "frog",
+                "adversary_confidence": "70.97%",
+                "pert_norm_0": 3025.0,
+                "pert_norm_2": 5.3742995262146,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 29,
+                "original_label": "dog",
+                "clean_confidence": "59.87%",
+                "adversary_label": "frog",
+                "adversary_confidence": "89.40%",
+                "pert_norm_0": 3063.0,
+                "pert_norm_2": 5.419432163238525,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 30,
+                "original_label": "cat",
+                "clean_confidence": "58.59%",
+                "adversary_label": "deer",
+                "adversary_confidence": "99.03%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.541938781738281,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 31,
+                "original_label": "automobile",
+                "clean_confidence": "99.97%",
+                "adversary_label": "frog",
+                "adversary_confidence": "72.08%",
+                "pert_norm_0": 3072.0,
+                "pert_norm_2": 5.509701728820801,
+                "pert_norm_inf": 0.10000002384185791
+            },
+            {
+                "index": 32,
+                "original_label": "horse",
+                "clean_confidence": "95.20%",
+                "adversary_label": "frog",
+                "adversary_confidence": "91.70%",
+                "pert_norm_0": 3058.0,
+                "pert_norm_2": 5.424988746643066,
+                "pert_norm_inf": 0.10000002384185791
+            }
+        ]
+    }
+}

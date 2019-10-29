@@ -1,0 +1,55 @@
+{
+  "tasks": [
+    {
+      "task_data": {
+        "task_name": "samples",
+        "exec_multi": true,
+        "skip_no_attack": true,
+        "task_params": {
+          "limit_samples": 4
+        }
+      },
+      "nets": [
+        {
+          "model_name": "resnet50",
+          "datasource_name": "imagenet",
+          "net_id": "resnet50",
+          "datasource_params": {
+            "path": "/media/diegoirigaray/38F686EEF686ABA6/Diego/Facultad/ILSVRC2012_img_val",
+            "batch_size": 4
+          }
+        }
+      ],
+      "attacks": [
+        {
+          "attack_name": "fgsm",
+          "attack_params": {
+            "eps": 0.2776571810245514
+          }
+        },
+        {
+          "attack_name": "i_fgsm",
+          "attack_params": {
+            "eps": 0.2776571810245514,
+            "min_alpha": 0.01751
+          }
+        },
+        {
+          "attack_name": "mi_fgsm",
+          "attack_params": {
+            "eps": 0.2776571810245514
+          }
+        },
+        {
+          "attack_name": "deepfool"
+        },
+        {
+          "attack_name": "carlini_wagner",
+          "attack_params": {
+            "max_iterations": 200
+          }
+        }
+      ]
+    }
+  ]
+}

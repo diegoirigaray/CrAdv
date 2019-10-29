@@ -1,0 +1,374 @@
+{
+    "task_data": {
+        "task_name": "accuracy",
+        "skip_no_attack": true,
+        "skip_no_attack_variables": true,
+        "plot_together": false,
+        "plot_keys": [
+            "accuracy",
+            "top_5_accuracy"
+        ],
+        "task_params": {
+            "limit_samples": 4096,
+            "top_k": 5
+        },
+        "exec_multi": false,
+        "attack_on_defense": true,
+        "plot_results": false,
+        "skip_no_defense": false
+    },
+    "net_data": {
+        "model_name": "resnet50",
+        "datasource_name": "imagenet",
+        "net_id": "resnet50",
+        "datasource_params": {
+            "path": "/ens/home01/c/camila.serena/imagenet",
+            "shuffle": false,
+            "batch_size": 56
+        },
+        "model_params": {}
+    },
+    "attack_data": {
+        "attack_name": "fgsm",
+        "attack_params": {},
+        "except_variables": [],
+        "on_task_model": true
+    },
+    "defense_data": null,
+    "exec_time": "0h 14m 53s",
+    "result": {
+        "variable_name": "eps",
+        "results": {
+            "0.034707147628068924": {
+                "total": 4144,
+                "correct": 705,
+                "adversarial": 2941,
+                "accuracy": 0.17012548262548263,
+                "avg_confidence": {
+                    "correct": 0.6313995334273534,
+                    "adversarial": 0.5949283987030372
+                },
+                "top_5_accuracy": 0.57746138996139,
+                "clean_correct": {
+                    "total": 3646,
+                    "adversarial": 2941,
+                    "accuracy": 0.19336258913878224
+                },
+                "clean_avg_norm": {
+                    "0": 150528,
+                    "2": 187.566849285111,
+                    "inf": 0.9739637605011693
+                },
+                "adv_avg_norm": {
+                    "0": 149648.12512750766,
+                    "2": 3.0292089021923347,
+                    "inf": 0.007948029258144992
+                },
+                "adv_disimilarity": {
+                    "2": 0.017371484603820226,
+                    "inf": 0.008184039979838709
+                }
+            },
+            "0.06941429525613785": {
+                "total": 4144,
+                "correct": 605,
+                "adversarial": 3014,
+                "accuracy": 0.1459942084942085,
+                "avg_confidence": {
+                    "correct": 0.614105452190746,
+                    "adversarial": 0.5646079736746299
+                },
+                "top_5_accuracy": 0.5258204633204633,
+                "clean_correct": {
+                    "total": 3619,
+                    "adversarial": 3014,
+                    "accuracy": 0.16717325227963525
+                },
+                "clean_avg_norm": {
+                    "0": 150528,
+                    "2": 187.566849285111,
+                    "inf": 0.9739637605011693
+                },
+                "adv_avg_norm": {
+                    "0": 149638.85600530857,
+                    "2": 6.043320375479209,
+                    "inf": 0.01589595249099453
+                },
+                "adv_disimilarity": {
+                    "2": 0.034480174764862266,
+                    "inf": 0.01635771051454639
+                }
+            },
+            "0.1388285905122757": {
+                "total": 4144,
+                "correct": 621,
+                "adversarial": 2970,
+                "accuracy": 0.14985521235521235,
+                "avg_confidence": {
+                    "correct": 0.599821989758963,
+                    "adversarial": 0.5288584574304446
+                },
+                "top_5_accuracy": 0.5021718146718147,
+                "clean_correct": {
+                    "total": 3591,
+                    "adversarial": 2970,
+                    "accuracy": 0.17293233082706766
+                },
+                "clean_avg_norm": {
+                    "0": 150528,
+                    "2": 187.566849285111,
+                    "inf": 0.9739637605011693
+                },
+                "adv_avg_norm": {
+                    "0": 149620.95589225588,
+                    "2": 12.039898445309213,
+                    "inf": 0.03179180589990584
+                },
+                "adv_disimilarity": {
+                    "2": 0.06915240978151058,
+                    "inf": 0.03273667468366398
+                }
+            },
+            "0.20824288576841354": {
+                "total": 4144,
+                "correct": 643,
+                "adversarial": 2922,
+                "accuracy": 0.15516409266409267,
+                "avg_confidence": {
+                    "correct": 0.5930136890841494,
+                    "adversarial": 0.5063170538137908
+                },
+                "top_5_accuracy": 0.48986486486486486,
+                "clean_correct": {
+                    "total": 3565,
+                    "adversarial": 2922,
+                    "accuracy": 0.1803646563814867
+                },
+                "clean_avg_norm": {
+                    "0": 150528,
+                    "2": 187.566849285111,
+                    "inf": 0.9739637605011693
+                },
+                "adv_avg_norm": {
+                    "0": 149621.8295687885,
+                    "2": 17.996332000168444,
+                    "inf": 0.047687756697010454
+                },
+                "adv_disimilarity": {
+                    "2": 0.10285637135541578,
+                    "inf": 0.04910334783576271
+                }
+            },
+            "0.2776571810245514": {
+                "total": 4144,
+                "correct": 649,
+                "adversarial": 2880,
+                "accuracy": 0.15661196911196912,
+                "avg_confidence": {
+                    "correct": 0.5951064763524683,
+                    "adversarial": 0.48220735953913796
+                },
+                "top_5_accuracy": 0.47297297297297297,
+                "clean_correct": {
+                    "total": 3529,
+                    "adversarial": 2880,
+                    "accuracy": 0.1839047888920374
+                },
+                "clean_avg_norm": {
+                    "0": 150528,
+                    "2": 187.566849285111,
+                    "inf": 0.9739637605011693
+                },
+                "adv_avg_norm": {
+                    "0": 149636.81458333333,
+                    "2": 23.922389602661134,
+                    "inf": 0.06356152817606926
+                },
+                "adv_disimilarity": {
+                    "2": 0.13599651124742296,
+                    "inf": 0.06542888453437222
+                }
+            },
+            "0.4164857715368271": {
+                "total": 4144,
+                "correct": 602,
+                "adversarial": 2873,
+                "accuracy": 0.14527027027027026,
+                "avg_confidence": {
+                    "correct": 0.586482725084521,
+                    "adversarial": 0.43130853090641436
+                },
+                "top_5_accuracy": 0.39913127413127414,
+                "clean_correct": {
+                    "total": 3475,
+                    "adversarial": 2873,
+                    "accuracy": 0.17323741007194243
+                },
+                "clean_avg_norm": {
+                    "0": 150528,
+                    "2": 187.566849285111,
+                    "inf": 0.9739637605011693
+                },
+                "adv_avg_norm": {
+                    "0": 149692.57883745214,
+                    "2": 35.639241734739386,
+                    "inf": 0.0953753532286185
+                },
+                "adv_disimilarity": {
+                    "2": 0.20286434368103007,
+                    "inf": 0.09822780821242899
+                }
+            },
+            "0.5553143620491028": {
+                "total": 4144,
+                "correct": 455,
+                "adversarial": 2965,
+                "accuracy": 0.1097972972972973,
+                "avg_confidence": {
+                    "correct": 0.5469718454303322,
+                    "adversarial": 0.3664482206759525
+                },
+                "top_5_accuracy": 0.29343629343629346,
+                "clean_correct": {
+                    "total": 3420,
+                    "adversarial": 2965,
+                    "accuracy": 0.13304093567251463
+                },
+                "clean_avg_norm": {
+                    "0": 150528,
+                    "2": 187.566849285111,
+                    "inf": 0.9739637605011693
+                },
+                "adv_avg_norm": {
+                    "0": 149718.6812816189,
+                    "2": 47.14878049081735,
+                    "inf": 0.1271670461304071
+                },
+                "adv_disimilarity": {
+                    "2": 0.26790228983604086,
+                    "inf": 0.13091029895698844
+                }
+            },
+            "0.8329715430736542": {
+                "total": 4144,
+                "correct": 96,
+                "adversarial": 3258,
+                "accuracy": 0.023166023166023165,
+                "avg_confidence": {
+                    "correct": 0.46002714479497325,
+                    "adversarial": 0.2867228913116923
+                },
+                "top_5_accuracy": 0.07215250965250965,
+                "clean_correct": {
+                    "total": 3354,
+                    "adversarial": 3258,
+                    "accuracy": 0.028622540250447227
+                },
+                "clean_avg_norm": {
+                    "0": 150528,
+                    "2": 187.566849285111,
+                    "inf": 0.9739637605011693
+                },
+                "adv_avg_norm": {
+                    "0": 149691.0030693677,
+                    "2": 69.44725011330283,
+                    "inf": 0.1907505978829587
+                },
+                "adv_disimilarity": {
+                    "2": 0.39613945342193285,
+                    "inf": 0.19646139478595656
+                }
+            },
+            "1.1106287240982056": {
+                "total": 4144,
+                "correct": 8,
+                "adversarial": 3337,
+                "accuracy": 0.0019305019305019305,
+                "avg_confidence": {
+                    "correct": 0.549140851944685,
+                    "adversarial": 0.37310219897029284
+                },
+                "top_5_accuracy": 0.010135135135135136,
+                "clean_correct": {
+                    "total": 3345,
+                    "adversarial": 3337,
+                    "accuracy": 0.002391629297458894
+                },
+                "clean_avg_norm": {
+                    "0": 150528,
+                    "2": 187.566849285111,
+                    "inf": 0.9739637605011693
+                },
+                "adv_avg_norm": {
+                    "0": 149644.3332334432,
+                    "2": 90.70029817786373,
+                    "inf": 0.25433409067553464
+                },
+                "adv_disimilarity": {
+                    "2": 0.5170053571221498,
+                    "inf": 0.2620874715844492
+                }
+            },
+            "1.6659430861473083": {
+                "total": 4144,
+                "correct": 1,
+                "adversarial": 3345,
+                "accuracy": 0.00024131274131274132,
+                "avg_confidence": {
+                    "correct": 0.9966566562652588,
+                    "adversarial": 0.87717238684228
+                },
+                "top_5_accuracy": 0.00024131274131274132,
+                "clean_correct": {
+                    "total": 3346,
+                    "adversarial": 3345,
+                    "accuracy": 0.00029886431560071725
+                },
+                "clean_avg_norm": {
+                    "0": 150528,
+                    "2": 187.566849285111,
+                    "inf": 0.9739637605011693
+                },
+                "adv_avg_norm": {
+                    "0": 149579.43647234677,
+                    "2": 129.38720542554185,
+                    "inf": 0.38138703031212046
+                },
+                "adv_disimilarity": {
+                    "2": 0.7368682952561543,
+                    "inf": 0.39301323712495767
+                }
+            },
+            "2.221257448196411": {
+                "total": 4144,
+                "correct": 0,
+                "adversarial": 3346,
+                "accuracy": 0.0,
+                "avg_confidence": {
+                    "correct": "-",
+                    "adversarial": 0.9852500882465114
+                },
+                "top_5_accuracy": 0.0,
+                "clean_correct": {
+                    "total": 3346,
+                    "adversarial": 3346,
+                    "accuracy": 0.0
+                },
+                "clean_avg_norm": {
+                    "0": 150528,
+                    "2": 187.566849285111,
+                    "inf": 0.9739637605011693
+                },
+                "adv_avg_norm": {
+                    "0": 149621.08786610878,
+                    "2": 162.03968255589697,
+                    "inf": 0.5086680649998512
+                },
+                "adv_disimilarity": {
+                    "2": 0.9244484505251505,
+                    "inf": 0.5241912686746418
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "task_data": {
+        "task_name": "accuracy",
+        "skip_no_attack": true,
+        "task_params": {
+            "limit_samples": 1250
+        },
+        "exec_multi": false,
+        "attack_on_defense": true,
+        "plot_results": false,
+        "plot_keys": [],
+        "plot_together": true,
+        "skip_no_defense": false,
+        "skip_no_attack_variables": false
+    },
+    "net_data": {
+        "model_name": "resnet14_cifar",
+        "datasource_name": "cifar10",
+        "net_id": "resnet14_cifar",
+        "datasource_params": {
+            "batch_size": 100,
+            "round": true
+        },
+        "model_params": {}
+    },
+    "attack_data": {
+        "attack_name": "deepfool",
+        "attack_params": {},
+        "except_variables": [],
+        "on_task_model": true
+    },
+    "defense_data": null,
+    "exec_time": "0h 1m 31s",
+    "result": {
+        "total": 1300,
+        "correct": 0,
+        "adversarial": 1029,
+        "accuracy": 0.0,
+        "avg_confidence": {
+            "correct": "-",
+            "adversarial": 0.4631160517359846
+        },
+        "clean_correct": {
+            "total": 1029,
+            "adversarial": 1029,
+            "accuracy": 0.0
+        },
+        "clean_avg_norm": {
+            "0": 3072,
+            "2": 29.368111290564904,
+            "inf": 0.9411282055194561
+        },
+        "adv_avg_norm": {
+            "0": 3056.1175898931,
+            "2": 0.19141100539642125,
+            "inf": 0.0227494202735241
+        },
+        "adv_disimilarity": {
+            "2": 0.006698837462157388,
+            "inf": 0.02410655987853559
+        }
+    }
+}

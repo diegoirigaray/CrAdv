@@ -1,0 +1,54 @@
+{
+    "task_data": {
+        "task_name": "accuracy",
+        "skip_no_attack": true,
+        "task_params": {},
+        "exec_multi": false,
+        "attack_on_defense": true,
+        "plot_results": false,
+        "plot_keys": [],
+        "plot_together": true,
+        "skip_no_defense": false,
+        "skip_no_attack_variables": false
+    },
+    "net_data": {
+        "model_name": "resnet14_mnist",
+        "datasource_name": "mnist",
+        "net_id": "resnet14_mnist",
+        "datasource_params": {
+            "batch_size": 512
+        },
+        "model_params": {}
+    },
+    "attack_data": {
+        "attack_name": "fgsm",
+        "attack_params": {
+            "eps": 0.5
+        },
+        "except_variables": [],
+        "on_task_model": true
+    },
+    "defense_data": null,
+    "exec_time": "0h 0m 26s",
+    "result": {
+        "total": 10000,
+        "correct": 1214,
+        "adversarial": 8717,
+        "accuracy": "12.14%",
+        "accuracy_v": 0.1214,
+        "c_total": 9931,
+        "c_accuracy": "12.22%",
+        "c_fr": "87.78%",
+        "c_accuracy_v": 0.12224348001208338,
+        "correct_avg_confidence": "81.66%",
+        "dataset_norm_0": 784,
+        "dataset_avg_norm_2": 9.295949877929688,
+        "dataset_avg_norm_inf": 0.999599609375,
+        "adv_avg_norm_0": 466.81025582195707,
+        "adv_avg_norm_2": 5.145561138615636,
+        "adv_disimilarity": 0.5739298115168278,
+        "adv_avg_norm_inf": 0.25000003413403543,
+        "adv_inf_disimilarity": 0.2500998420535909,
+        "fooled_avg_confidence": "82.57%"
+    }
+}

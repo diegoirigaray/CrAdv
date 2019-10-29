@@ -1,0 +1,72 @@
+{
+    "task_data": {
+        "task_name": "accuracy",
+        "skip_no_attack": true,
+        "skip_no_attack_variables": false,
+        "plot_keys": [
+            "accuracy",
+            "top_5_accuracy"
+        ],
+        "task_params": {
+            "limit_samples": 128,
+            "top_k": 5
+        },
+        "exec_multi": false,
+        "attack_on_defense": true,
+        "plot_results": false,
+        "plot_together": true,
+        "skip_no_defense": false
+    },
+    "net_data": {
+        "model_name": "resnet50",
+        "datasource_name": "imagenet",
+        "net_id": "resnet50",
+        "datasource_params": {
+            "path": "/ens/home01/c/camila.serena/imagenet",
+            "shuffle": false,
+            "batch_size": 48
+        },
+        "model_params": {}
+    },
+    "attack_data": {
+        "attack_name": "carlini_wagner",
+        "attack_params": {
+            "max_iterations": 100,
+            "c_const": 10
+        },
+        "except_variables": [],
+        "on_task_model": true
+    },
+    "defense_data": null,
+    "exec_time": "0h 0m 37s",
+    "result": {
+        "total": 144,
+        "correct": 125,
+        "adversarial": 0,
+        "accuracy": 0.8680555555555556,
+        "avg_confidence": {
+            "correct": 0.9567569580078125,
+            "adversarial": "-"
+        },
+        "top_5_accuracy": 0.9791666666666666,
+        "clean_correct": {
+            "total": 125,
+            "adversarial": 0,
+            "accuracy": 1.0
+        },
+        "clean_avg_norm": {
+            "0": 150528,
+            "2": 184.85301378038196,
+            "inf": 0.9860293865203857
+        },
+        "adv_avg_norm": {
+            "0": 0.0,
+            "2": 0.0,
+            "inf": 0.0
+        },
+        "adv_disimilarity": {
+            "2": 0.0,
+            "inf": 0.0
+        }
+    }
+}

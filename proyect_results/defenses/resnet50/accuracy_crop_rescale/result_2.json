@@ -1,0 +1,46 @@
+{
+    "task_data": {
+        "task_name": "accuracy",
+        "skip_no_defense": true,
+        "task_params": {
+            "limit_samples": 1024,
+            "top_k": 5
+        },
+        "exec_multi": false,
+        "attack_on_defense": true,
+        "plot_results": false,
+        "plot_keys": [],
+        "plot_together": true,
+        "skip_no_attack": false,
+        "skip_no_attack_variables": false
+    },
+    "net_data": {
+        "model_name": "resnet50",
+        "datasource_name": "imagenet",
+        "net_id": "resnet50",
+        "datasource_params": {
+            "path": "/ens/home01/c/camila.serena/imagenet",
+            "batch_size": 40
+        },
+        "model_params": {}
+    },
+    "attack_data": null,
+    "defense_data": {
+        "defense_name": "crop_rescale",
+        "defense_params": {
+            "crop_size": 90,
+            "num_samples": 20
+        }
+    },
+    "exec_time": "0h 1m 13s",
+    "result": {
+        "total": 1040,
+        "correct": 679,
+        "adversarial": 0,
+        "accuracy": 0.6528846153846154,
+        "avg_confidence": {
+            "correct": 0.66600467389743
+        },
+        "top_5_accuracy": 0.875
+    }
+}

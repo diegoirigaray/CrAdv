@@ -1,0 +1,183 @@
+{
+  "config": {
+    "batch_size_factor": 10,
+    "device_ids": ["cuda:0", "cuda:1"],
+    "results_path": "proyect_results/defenses"
+  },
+  "tasks": [
+    {
+      "task_data": {
+        "task_name": "accuracy",
+        "skip_no_defense": true,
+        "task_params": {
+          "limit_samples": 1024,
+          "top_k": 5
+        }
+      },
+      "nets": [
+        {
+          "model_name": "resnet50",
+          "datasource_name": "imagenet",
+          "net_id": "resnet50",
+          "datasource_params": {
+            "path": "/ens/home01/c/camila.serena/imagenet",
+            "batch_size": 4
+          }
+        }
+      ],
+      "attacks": [],
+      "defenses": [
+        {
+          "defense_name": "jpeg"
+        }
+      ]
+    },
+    {
+      "task_data": {
+        "task_name": "accuracy",
+        "skip_no_defense": true,
+        "task_params": {
+          "limit_samples": 1024,
+          "top_k": 5
+        }
+      },
+      "nets": [
+        {
+          "model_name": "resnet50",
+          "datasource_name": "imagenet",
+          "net_id": "resnet50",
+          "datasource_params": {
+            "path": "/ens/home01/c/camila.serena/imagenet",
+            "batch_size": 4
+          }
+        }
+      ],
+      "attacks": [],
+      "defenses": [
+        {
+          "defense_name": "crop_rescale",
+          "defense_params": {
+            "crop_size": 90,
+            "num_samples": 20
+          }
+        }
+      ]
+    },
+    {
+      "task_data": {
+        "task_name": "constrained_accuracy",
+        "exec_multi":true,
+        "skip_no_attack": true,
+        "skip_no_defense": false,
+        "attack_on_defense": false,
+        "task_params": {
+          "limit_samples": 256,
+          "contraint_step": 0.01,
+          "constraint_max": 0.075
+        }
+      },
+      "nets": [
+        {
+          "model_name": "resnet50",
+          "datasource_name": "imagenet",
+          "net_id": "resnet50",
+          "datasource_params": {
+            "path": "/ens/home01/c/camila.serena/imagenet",
+            "batch_size": 4
+          }
+        }
+      ],
+      "attacks": [
+        {
+          "attack_name": "carlini_wagner",
+          "attack_params": {
+            "max_iterations": 100,
+            "c_const": 45
+          }
+        },
+        {
+          "attack_name": "fgsm",
+          "eps": 1
+        },
+        {
+          "attack_name": "random_noise"
+        },
+        {
+          "attack_name": "i_fgsm",
+          "attack_params": {
+            "eps": 0.28016,
+            "min_alpha": 0.01751
+          }
+        },
+        {
+          "attack_name": "deepfool"
+        }
+      ],
+      "defenses": [
+        {
+          "defense_name": "crop_rescale",
+          "defense_params": {
+            "crop_size": 90,
+            "num_samples": 20
+          }
+        }
+      ]
+    },
+    {
+      "task_data": {
+        "task_name": "constrained_accuracy",
+        "exec_multi":true,
+        "skip_no_attack": true,
+        "skip_no_defense": true,
+        "attack_on_defense": false,
+        "task_params": {
+          "limit_samples": 256,
+          "contraint_step": 0.01,
+          "constraint_max": 0.075
+        }
+      },
+      "nets": [
+        {
+          "model_name": "resnet50",
+          "datasource_name": "imagenet",
+          "net_id": "resnet50",
+          "datasource_params": {
+            "path": "/ens/home01/c/camila.serena/imagenet",
+            "batch_size": 4
+          }
+        }
+      ],
+      "attacks": [
+        {
+          "attack_name": "carlini_wagner",
+          "attack_params": {
+            "max_iterations": 100,
+            "c_const": 45
+          }
+        },
+        {
+          "attack_name": "fgsm",
+          "eps": 1
+        },
+        {
+          "attack_name": "random_noise"
+        },
+        {
+          "attack_name": "i_fgsm",
+          "attack_params": {
+            "eps": 0.28016,
+            "min_alpha": 0.01751
+          }
+        },
+        {
+          "attack_name": "deepfool"
+        }
+      ],
+      "defenses": [
+        {
+          "defense_name": "jpeg"
+        }
+      ]
+    }
+  ]
+}

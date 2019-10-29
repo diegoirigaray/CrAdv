@@ -1,0 +1,58 @@
+{
+  "config": {
+    "batch_size_factor": 16,
+    "device_ids": ["cuda:0", "cuda:1"],
+    "results_path": "proyect_results/i_fgsm"
+  },
+  "tasks": [
+    {
+      "task_data": {
+        "task_name": "accuracy",
+        "skip_no_attack": true,
+        "skip_no_attack_variables": true,
+        "plot_keys": ["accuracy", "top_5_accuracy"],
+        "task_params": {
+          "limit_samples": 2048,
+          "top_k": 5
+        }
+      },
+      "nets": [
+        {
+          "model_name": "inception_v3",
+          "datasource_name": "imagenet_inc3",
+          "net_id": "inception_v3",
+          "datasource_params": {
+            "path": "/ens/home01/c/camila.serena/imagenet",
+            "shuffle": false,
+            "batch_size": 4
+          }
+        }
+      ],
+      "attack_variables": [
+        {
+          "variable_name": "eps",
+          "variable_values": [0.034707147628068924, 0.06941429525613785, 0.1388285905122757, 0.20824288576841354, 0.2776571810245514, 0.4164857715368271, 0.5553143620491028, 0.8329715430736542, 1.1106287240982056, 1.6659430861473083, 2.221257448196411]
+        }
+      ],
+      "attacks": [
+        {
+          "attack_name": "fgsm"
+        },
+        {
+          "attack_name": "i_fgsm",
+          "attack_params": {
+            "min_alpha": 0.01751
+          }
+        },
+        {
+          "attack_name": "i_fgsm",
+          "attack_params": {
+            "least_likely": true,
+            "min_alpha": 0.01751
+          }
+        }
+      ],
+      "defenses": []
+    }
+  ]
+}

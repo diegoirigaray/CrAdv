@@ -1,0 +1,69 @@
+{
+    "task_data": {
+        "task_name": "accuracy",
+        "skip_no_attack": true,
+        "task_params": {
+            "limit_samples": 1000,
+            "top_k": 5
+        },
+        "exec_multi": false,
+        "attack_on_defense": true,
+        "plot_results": false,
+        "plot_keys": [],
+        "plot_together": true,
+        "skip_no_defense": false,
+        "skip_no_attack_variables": false
+    },
+    "net_data": {
+        "model_name": "resnet14_mnist",
+        "datasource_name": "mnist",
+        "net_id": "resnet14_mnist",
+        "datasource_params": {
+            "batch_size": 100,
+            "shuffle": false,
+            "round": true
+        },
+        "model_params": {}
+    },
+    "attack_data": {
+        "attack_name": "carlini_wagner",
+        "attack_params": {
+            "max_iterations": 1000,
+            "target_class": "random"
+        },
+        "except_variables": [],
+        "on_task_model": true
+    },
+    "defense_data": null,
+    "exec_time": "1h 9m 53s",
+    "result": {
+        "total": 1000,
+        "correct": 0,
+        "adversarial": 988,
+        "accuracy": 0.0,
+        "avg_confidence": {
+            "correct": "-",
+            "adversarial": 0.4525508610343161
+        },
+        "top_5_accuracy": 0.994,
+        "clean_correct": {
+            "total": 988,
+            "adversarial": 988,
+            "accuracy": 0.0
+        },
+        "clean_avg_norm": {
+            "0": 784,
+            "2": 8.871741943359375,
+            "inf": 0.9995764770507812
+        },
+        "adv_avg_norm": {
+            "0": 656.586032388664,
+            "2": 0.9059073645093663,
+            "inf": 0.2322985073815473
+        },
+        "adv_disimilarity": {
+            "2": 0.10500900851570161,
+            "inf": 0.23240893862025458
+        }
+    }
+}

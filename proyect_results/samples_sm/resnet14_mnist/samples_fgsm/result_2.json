@@ -1,0 +1,361 @@
+{
+    "task_data": {
+        "task_name": "samples",
+        "skip_no_attack": true,
+        "task_params": {
+            "limit_samples": 32
+        },
+        "exec_multi": false,
+        "attack_on_defense": true,
+        "plot_results": false,
+        "plot_keys": [],
+        "plot_together": true,
+        "skip_no_defense": false,
+        "skip_no_attack_variables": false
+    },
+    "net_data": {
+        "model_name": "resnet14_mnist",
+        "datasource_name": "mnist",
+        "net_id": "resnet14_mnist",
+        "datasource_params": {
+            "batch_size": 32
+        },
+        "model_params": {}
+    },
+    "attack_data": {
+        "attack_name": "fgsm",
+        "attack_params": {
+            "eps": 0.5
+        },
+        "except_variables": [],
+        "on_task_model": true
+    },
+    "defense_data": null,
+    "exec_time": "0h 0m 0s",
+    "result": {
+        "total": 32,
+        "correct": 3,
+        "samples": [
+            {
+                "index": 1,
+                "original_label": "0 - zero",
+                "clean_confidence": "99.45%",
+                "adversary_label": "8 - eight",
+                "adversary_confidence": "96.92%",
+                "pert_norm_0": 436.0,
+                "pert_norm_2": 5.220153331756592,
+                "pert_norm_inf": 0.25
+            },
+            {
+                "index": 2,
+                "original_label": "0 - zero",
+                "clean_confidence": "99.50%",
+                "adversary_label": "8 - eight",
+                "adversary_confidence": "88.34%",
+                "pert_norm_0": 494.0,
+                "pert_norm_2": 5.272738933563232,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 3,
+                "original_label": "0 - zero",
+                "clean_confidence": "93.63%",
+                "adversary_label": "8 - eight",
+                "adversary_confidence": "92.58%",
+                "pert_norm_0": 475.0,
+                "pert_norm_2": 5.132219314575195,
+                "pert_norm_inf": 0.25
+            },
+            {
+                "index": 4,
+                "original_label": "9 - nine",
+                "clean_confidence": "99.92%",
+                "adversary_label": "8 - eight",
+                "adversary_confidence": "92.21%",
+                "pert_norm_0": 459.0,
+                "pert_norm_2": 5.198038101196289,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 5,
+                "original_label": "1 - one",
+                "clean_confidence": "99.98%",
+                "adversary_label": "8 - eight",
+                "adversary_confidence": "48.35%",
+                "pert_norm_0": 443.0,
+                "pert_norm_2": 5.114419937133789,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 6,
+                "original_label": "7 - seven",
+                "clean_confidence": "99.94%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "99.98%",
+                "pert_norm_0": 448.0,
+                "pert_norm_2": 5.115593910217285,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 7,
+                "original_label": "1 - one",
+                "clean_confidence": "99.92%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "99.69%",
+                "pert_norm_0": 406.0,
+                "pert_norm_2": 4.8730363845825195,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 8,
+                "original_label": "2 - two",
+                "clean_confidence": "99.98%",
+                "adversary_label": "2 - two",
+                "adversary_confidence": "75.50%",
+                "pert_norm_0": 511.0,
+                "pert_norm_2": 5.264927387237549,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 9,
+                "original_label": "3 - three",
+                "clean_confidence": "99.99%",
+                "adversary_label": "8 - eight",
+                "adversary_confidence": "50.60%",
+                "pert_norm_0": 476.0,
+                "pert_norm_2": 5.118741989135742,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 10,
+                "original_label": "8 - eight",
+                "clean_confidence": "99.74%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "98.97%",
+                "pert_norm_0": 495.0,
+                "pert_norm_2": 5.169591426849365,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 11,
+                "original_label": "1 - one",
+                "clean_confidence": "99.93%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "99.26%",
+                "pert_norm_0": 395.0,
+                "pert_norm_2": 4.854455471038818,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 12,
+                "original_label": "9 - nine",
+                "clean_confidence": "99.92%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "82.32%",
+                "pert_norm_0": 445.0,
+                "pert_norm_2": 4.980639457702637,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 13,
+                "original_label": "7 - seven",
+                "clean_confidence": "99.89%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "99.82%",
+                "pert_norm_0": 474.0,
+                "pert_norm_2": 5.131165504455566,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 14,
+                "original_label": "2 - two",
+                "clean_confidence": "99.99%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "81.17%",
+                "pert_norm_0": 502.0,
+                "pert_norm_2": 5.217175006866455,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 15,
+                "original_label": "0 - zero",
+                "clean_confidence": "99.97%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "44.68%",
+                "pert_norm_0": 508.0,
+                "pert_norm_2": 5.347527980804443,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 16,
+                "original_label": "4 - four",
+                "clean_confidence": "99.99%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "96.44%",
+                "pert_norm_0": 446.0,
+                "pert_norm_2": 5.070667743682861,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 17,
+                "original_label": "2 - two",
+                "clean_confidence": "99.87%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "82.50%",
+                "pert_norm_0": 496.0,
+                "pert_norm_2": 5.187195301055908,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 18,
+                "original_label": "8 - eight",
+                "clean_confidence": "99.95%",
+                "adversary_label": "8 - eight",
+                "adversary_confidence": "74.84%",
+                "pert_norm_0": 459.0,
+                "pert_norm_2": 5.083158016204834,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 19,
+                "original_label": "9 - nine",
+                "clean_confidence": "99.96%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "95.16%",
+                "pert_norm_0": 459.0,
+                "pert_norm_2": 5.108365058898926,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 20,
+                "original_label": "7 - seven",
+                "clean_confidence": "99.93%",
+                "adversary_label": "8 - eight",
+                "adversary_confidence": "54.89%",
+                "pert_norm_0": 495.0,
+                "pert_norm_2": 5.2435431480407715,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 21,
+                "original_label": "6 - six",
+                "clean_confidence": "99.99%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "88.86%",
+                "pert_norm_0": 466.0,
+                "pert_norm_2": 5.109422206878662,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 22,
+                "original_label": "8 - eight",
+                "clean_confidence": "99.78%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "97.07%",
+                "pert_norm_0": 469.0,
+                "pert_norm_2": 5.128549575805664,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 23,
+                "original_label": "2 - two",
+                "clean_confidence": "100.00%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "99.09%",
+                "pert_norm_0": 467.0,
+                "pert_norm_2": 5.213504791259766,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 24,
+                "original_label": "0 - zero",
+                "clean_confidence": "99.97%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "86.46%",
+                "pert_norm_0": 495.0,
+                "pert_norm_2": 5.300883769989014,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 25,
+                "original_label": "0 - zero",
+                "clean_confidence": "100.00%",
+                "adversary_label": "8 - eight",
+                "adversary_confidence": "98.04%",
+                "pert_norm_0": 510.0,
+                "pert_norm_2": 5.396207809448242,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 26,
+                "original_label": "9 - nine",
+                "clean_confidence": "81.07%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "81.79%",
+                "pert_norm_0": 435.0,
+                "pert_norm_2": 4.933538913726807,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 27,
+                "original_label": "1 - one",
+                "clean_confidence": "94.88%",
+                "adversary_label": "8 - eight",
+                "adversary_confidence": "39.22%",
+                "pert_norm_0": 450.0,
+                "pert_norm_2": 4.8884782791137695,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 28,
+                "original_label": "4 - four",
+                "clean_confidence": "99.91%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "73.50%",
+                "pert_norm_0": 463.0,
+                "pert_norm_2": 5.129146099090576,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 29,
+                "original_label": "2 - two",
+                "clean_confidence": "100.00%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "75.50%",
+                "pert_norm_0": 488.0,
+                "pert_norm_2": 5.222345352172852,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 30,
+                "original_label": "2 - two",
+                "clean_confidence": "99.98%",
+                "adversary_label": "8 - eight",
+                "adversary_confidence": "78.83%",
+                "pert_norm_0": 458.0,
+                "pert_norm_2": 5.350233554840088,
+                "pert_norm_inf": 0.25
+            },
+            {
+                "index": 31,
+                "original_label": "1 - one",
+                "clean_confidence": "99.99%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "80.06%",
+                "pert_norm_0": 428.0,
+                "pert_norm_2": 4.965920448303223,
+                "pert_norm_inf": 0.2500000298023224
+            },
+            {
+                "index": 32,
+                "original_label": "3 - three",
+                "clean_confidence": "99.99%",
+                "adversary_label": "3 - three",
+                "adversary_confidence": "72.06%",
+                "pert_norm_0": 437.0,
+                "pert_norm_2": 4.960631370544434,
+                "pert_norm_inf": 0.2500000298023224
+            }
+        ]
+    }
+}

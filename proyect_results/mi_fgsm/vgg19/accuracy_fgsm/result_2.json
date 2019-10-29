@@ -1,0 +1,70 @@
+{
+    "task_data": {
+        "task_name": "accuracy",
+        "skip_no_attack": true,
+        "task_params": {
+            "limit_samples": 1536,
+            "top_k": 5
+        },
+        "exec_multi": false,
+        "attack_on_defense": true,
+        "plot_results": false,
+        "plot_keys": [],
+        "plot_together": true,
+        "skip_no_defense": false,
+        "skip_no_attack_variables": false
+    },
+    "net_data": {
+        "model_name": "vgg19",
+        "datasource_name": "imagenet",
+        "net_id": "vgg19",
+        "datasource_params": {
+            "path": "/ens/home01/c/camila.serena/imagenet",
+            "batch_size": 40
+        },
+        "model_params": {}
+    },
+    "attack_data": {
+        "attack_name": "fgsm",
+        "attack_params": {
+            "eps": 0.276
+        },
+        "except_variables": [],
+        "on_task_model": true,
+        "specific_model": {
+            "model_name": "resnet50",
+            "datasource_name": "imagenet",
+            "net_id": "resnet50",
+            "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 40
+            },
+            "model_params": {}
+        }
+    },
+    "defense_data": null,
+    "exec_time": "0h 0m 47s",
+    "result": {
+        "total": 1560,
+        "correct": 528,
+        "adversarial": 666,
+        "accuracy": "33.85%",
+        "accuracy_v": 0.3384615384615385,
+        "top_5_accuracy": "62.63%",
+        "top_5_accuracy_v": 0.6262820512820513,
+        "c_total": 1194,
+        "c_accuracy": "44.22%",
+        "c_fr": "55.78%",
+        "c_accuracy_v": 0.44221105527638194,
+        "correct_avg_confidence": "69.09%",
+        "dataset_norm_0": 150528,
+        "dataset_avg_norm_2": 194.37691337389825,
+        "dataset_avg_norm_inf": 0.9782327627524351,
+        "adv_avg_norm_0": 149581.95795795796,
+        "adv_avg_norm_2": 23.697675367017407,
+        "adv_disimilarity": 0.1294603562569833,
+        "adv_avg_norm_inf": 0.06320409687073739,
+        "adv_inf_disimilarity": 0.06493100622394779,
+        "fooled_avg_confidence": "50.27%"
+    }
+}

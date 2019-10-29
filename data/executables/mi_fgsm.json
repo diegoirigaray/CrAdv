@@ -1,0 +1,315 @@
+{
+  "config": {
+    "batch_size_factor": 10,
+    "device_ids": ["cuda:0", "cuda:1"],
+    "results_path": "proyect_results/mi_fgsm"
+  },
+  "tasks": [
+    {
+      "task_data": {
+        "task_name": "accuracy",
+        "skip_no_attack": true,
+        "task_params": {
+          "limit_samples": 1536,
+          "top_k": 5
+        }
+      },
+      "nets": [
+        {
+          "model_name": "resnet50",
+          "datasource_name": "imagenet",
+          "net_id": "resnet50",
+          "datasource_params": {
+            "path": "/ens/home01/c/camila.serena/imagenet",
+            "batch_size": 4
+          }
+        }
+      ],
+      "attacks": [
+        {
+          "attack_name": "fgsm",
+          "attack_params": {
+            "eps": 0.276
+          },
+          "specific_models": [
+            {
+              "model_name": "vgg19",
+              "datasource_name": "imagenet",
+              "net_id": "vgg19",
+              "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 4
+              }
+            },
+            {
+              "model_name": "densenet121",
+              "datasource_name": "imagenet",
+              "net_id": "densenet121",
+              "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 4
+              }
+            }
+          ]
+        },
+        {
+          "attack_name": "i_fgsm",
+          "attack_params": {
+            "eps": 0.276
+          },
+          "specific_models": [
+            {
+              "model_name": "vgg19",
+              "datasource_name": "imagenet",
+              "net_id": "vgg19",
+              "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 4
+              }
+            },
+            {
+              "model_name": "densenet121",
+              "datasource_name": "imagenet",
+              "net_id": "densenet121",
+              "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 4
+              }
+            }
+          ]
+        },
+        {
+          "attack_name": "mi_fgsm",
+          "attack_params": {
+            "eps": 0.276
+          },
+          "specific_models": [
+            {
+              "model_name": "vgg19",
+              "datasource_name": "imagenet",
+              "net_id": "vgg19",
+              "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 4
+              }
+            },
+            {
+              "model_name": "densenet121",
+              "datasource_name": "imagenet",
+              "net_id": "densenet121",
+              "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 4
+              }
+            }
+          ]
+        }
+      ],
+      "defenses": []
+    },
+    {
+      "task_data": {
+        "task_name": "accuracy",
+        "skip_no_attack": true,
+        "task_params": {
+          "limit_samples": 1536,
+          "top_k": 5
+        }
+      },
+      "nets": [
+        {
+          "model_name": "vgg19",
+          "datasource_name": "imagenet",
+          "net_id": "vgg19",
+          "datasource_params": {
+            "path": "/ens/home01/c/camila.serena/imagenet",
+            "batch_size": 4
+          }
+        }
+      ],
+      "attacks": [
+        {
+          "attack_name": "fgsm",
+          "attack_params": {
+            "eps": 0.276
+          },
+          "specific_models": [
+            {
+              "model_name": "resnet50",
+              "datasource_name": "imagenet",
+              "net_id": "resnet50",
+              "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 4
+              }
+            },
+            {
+              "model_name": "densenet121",
+              "datasource_name": "imagenet",
+              "net_id": "densenet121",
+              "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 4
+              }
+            }
+          ]
+        },
+        {
+          "attack_name": "i_fgsm",
+          "attack_params": {
+            "eps": 0.276
+          },
+          "specific_models": [
+            {
+              "model_name": "resnet50",
+              "datasource_name": "imagenet",
+              "net_id": "resnet50",
+              "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 4
+              }
+            },
+            {
+              "model_name": "densenet121",
+              "datasource_name": "imagenet",
+              "net_id": "densenet121",
+              "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 4
+              }
+            }
+          ]
+        },
+        {
+          "attack_name": "mi_fgsm",
+          "attack_params": {
+            "eps": 0.276
+          },
+          "specific_models": [
+            {
+              "model_name": "resnet50",
+              "datasource_name": "imagenet",
+              "net_id": "resnet50",
+              "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 4
+              }
+            },
+            {
+              "model_name": "densenet121",
+              "datasource_name": "imagenet",
+              "net_id": "densenet121",
+              "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 4
+              }
+            }
+          ]
+        }
+      ],
+      "defenses": []
+    },
+    {
+      "task_data": {
+        "task_name": "accuracy",
+        "skip_no_attack": true,
+        "task_params": {
+          "limit_samples": 1536,
+          "top_k": 5
+        }
+      },
+      "nets": [
+        {
+          "model_name": "densenet121",
+          "datasource_name": "imagenet",
+          "net_id": "densenet121",
+          "datasource_params": {
+            "path": "/ens/home01/c/camila.serena/imagenet",
+            "batch_size": 4
+          }
+        }
+      ],
+      "attacks": [
+        {
+          "attack_name": "fgsm",
+          "attack_params": {
+            "eps": 0.276
+          },
+          "specific_models": [
+            {
+              "model_name": "resnet50",
+              "datasource_name": "imagenet",
+              "net_id": "resnet50",
+              "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 4
+              }
+            },
+            {
+              "model_name": "vgg19",
+              "datasource_name": "imagenet",
+              "net_id": "vgg19",
+              "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 4
+              }
+            }
+          ]
+        },
+        {
+          "attack_name": "i_fgsm",
+          "attack_params": {
+            "eps": 0.276
+          },
+          "specific_models": [
+            {
+              "model_name": "resnet50",
+              "datasource_name": "imagenet",
+              "net_id": "resnet50",
+              "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 4
+              }
+            },
+            {
+              "model_name": "vgg19",
+              "datasource_name": "imagenet",
+              "net_id": "vgg19",
+              "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 4
+              }
+            }
+          ]
+        },
+        {
+          "attack_name": "mi_fgsm",
+          "attack_params": {
+            "eps": 0.276
+          },
+          "specific_models": [
+            {
+              "model_name": "resnet50",
+              "datasource_name": "imagenet",
+              "net_id": "resnet50",
+              "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 4
+              }
+            },
+            {
+              "model_name": "vgg19",
+              "datasource_name": "imagenet",
+              "net_id": "vgg19",
+              "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 4
+              }
+            }
+          ]
+        }
+      ],
+      "defenses": []
+    }
+  ]
+}

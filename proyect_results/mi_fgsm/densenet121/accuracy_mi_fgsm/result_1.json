@@ -1,0 +1,60 @@
+{
+    "task_data": {
+        "task_name": "accuracy",
+        "skip_no_attack": true,
+        "task_params": {
+            "limit_samples": 1536,
+            "top_k": 5
+        },
+        "exec_multi": false,
+        "attack_on_defense": true,
+        "plot_results": false,
+        "plot_keys": [],
+        "plot_together": true,
+        "skip_no_defense": false,
+        "skip_no_attack_variables": false
+    },
+    "net_data": {
+        "model_name": "densenet121",
+        "datasource_name": "imagenet",
+        "net_id": "densenet121",
+        "datasource_params": {
+            "path": "/ens/home01/c/camila.serena/imagenet",
+            "batch_size": 40
+        },
+        "model_params": {}
+    },
+    "attack_data": {
+        "attack_name": "mi_fgsm",
+        "attack_params": {
+            "eps": 0.276
+        },
+        "except_variables": [],
+        "on_task_model": true
+    },
+    "defense_data": null,
+    "exec_time": "0h 1m 49s",
+    "result": {
+        "total": 1560,
+        "correct": 2,
+        "adversarial": 1157,
+        "accuracy": "0.13%",
+        "accuracy_v": 0.001282051282051282,
+        "top_5_accuracy": "0.45%",
+        "top_5_accuracy_v": 0.004487179487179487,
+        "c_total": 1159,
+        "c_accuracy": "0.17%",
+        "c_fr": "99.83%",
+        "c_accuracy_v": 0.001725625539257981,
+        "correct_avg_confidence": "100.00%",
+        "dataset_norm_0": 150528,
+        "dataset_avg_norm_2": 194.39826034154646,
+        "dataset_avg_norm_inf": 0.979932119907477,
+        "adv_avg_norm_0": 145504.6750216076,
+        "adv_avg_norm_2": 16.897833900814337,
+        "adv_disimilarity": 0.09271209427479947,
+        "adv_avg_norm_inf": 0.06320410910204967,
+        "adv_inf_disimilarity": 0.06468863443969752,
+        "fooled_avg_confidence": "99.27%"
+    }
+}

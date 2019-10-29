@@ -1,0 +1,66 @@
+{
+    "task_data": {
+        "task_name": "accuracy",
+        "skip_no_attack": true,
+        "task_params": {
+            "limit_samples": 10000
+        },
+        "description": "Accuracy base para deepfool y fgsm con parametros por defecto en imagenet.",
+        "exec_multi": false,
+        "attack_on_defense": true,
+        "plot_results": false,
+        "plot_keys": [],
+        "plot_together": true,
+        "skip_no_defense": false,
+        "skip_no_attack_variables": false
+    },
+    "net_data": {
+        "model_name": "resnet50",
+        "datasource_name": "imagenet",
+        "datasource_params": {
+            "batch_size": 100,
+            "shuffle": false
+        },
+        "net_id": "resnet50",
+        "model_params": {}
+    },
+    "attack_data": {
+        "attack_name": "fgsm",
+        "attack_params": {
+            "eps": 0.075
+        },
+        "except_variables": [],
+        "on_task_model": true
+    },
+    "defense_data": null,
+    "exec_time": "0h 3m 1s",
+    "result": {
+        "total": 10000,
+        "correct": 1315,
+        "adversarial": 7488,
+        "accuracy": 0.1315,
+        "avg_confidence": {
+            "correct": 0.6230907191795088,
+            "adversarial": 0.5729743930009695
+        },
+        "clean_correct": {
+            "total": 8803,
+            "adversarial": 7488,
+            "accuracy": 0.14938089287742815
+        },
+        "clean_avg_norm": {
+            "0": 150528,
+            "2": 190.2393810546875,
+            "inf": 0.9755419502258301
+        },
+        "adv_avg_norm": {
+            "0": 149890.18803418803,
+            "2": 6.536715629773262,
+            "inf": 0.017175076704504143
+        },
+        "adv_disimilarity": {
+            "2": 0.03637685746145554,
+            "inf": 0.017667613740469146
+        }
+    }
+}

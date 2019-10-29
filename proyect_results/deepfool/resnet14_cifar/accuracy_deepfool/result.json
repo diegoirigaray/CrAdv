@@ -1,0 +1,63 @@
+{
+    "task_data": {
+        "task_name": "accuracy",
+        "skip_no_attack": true,
+        "task_params": {
+            "limit_samples": 10000
+        },
+        "description": "Accuracy base para deepfool y fgsm con parametros por defecto en cifar.",
+        "exec_multi": false,
+        "attack_on_defense": true,
+        "plot_results": false,
+        "plot_keys": [],
+        "plot_together": true,
+        "skip_no_defense": false,
+        "skip_no_attack_variables": false
+    },
+    "net_data": {
+        "model_name": "resnet14_cifar",
+        "datasource_name": "cifar10",
+        "net_id": "resnet14_cifar",
+        "datasource_params": {
+            "batch_size": 100
+        },
+        "model_params": {}
+    },
+    "attack_data": {
+        "attack_name": "deepfool",
+        "attack_params": {},
+        "except_variables": [],
+        "on_task_model": true
+    },
+    "defense_data": null,
+    "exec_time": "0h 11m 11s",
+    "result": {
+        "total": 10000,
+        "correct": 1,
+        "adversarial": 7896,
+        "accuracy": 0.0001,
+        "avg_confidence": {
+            "correct": 0.38118743896484375,
+            "adversarial": 0.463427647027322
+        },
+        "clean_correct": {
+            "total": 7897,
+            "adversarial": 7896,
+            "accuracy": 0.00012663036596175764
+        },
+        "clean_avg_norm": {
+            "0": 3072,
+            "2": 29.099360888671875,
+            "inf": 0.942520394897461
+        },
+        "adv_avg_norm": {
+            "0": 3056.197695035461,
+            "2": 0.1926128802690825,
+            "inf": 0.022823432190560763
+        },
+        "adv_disimilarity": {
+            "2": 0.006801833029696765,
+            "inf": 0.024111445929020977
+        }
+    }
+}

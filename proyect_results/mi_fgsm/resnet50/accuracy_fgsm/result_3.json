@@ -1,0 +1,70 @@
+{
+    "task_data": {
+        "task_name": "accuracy",
+        "skip_no_attack": true,
+        "task_params": {
+            "limit_samples": 1536,
+            "top_k": 5
+        },
+        "exec_multi": false,
+        "attack_on_defense": true,
+        "plot_results": false,
+        "plot_keys": [],
+        "plot_together": true,
+        "skip_no_defense": false,
+        "skip_no_attack_variables": false
+    },
+    "net_data": {
+        "model_name": "resnet50",
+        "datasource_name": "imagenet",
+        "net_id": "resnet50",
+        "datasource_params": {
+            "path": "/ens/home01/c/camila.serena/imagenet",
+            "batch_size": 40
+        },
+        "model_params": {}
+    },
+    "attack_data": {
+        "attack_name": "fgsm",
+        "attack_params": {
+            "eps": 0.276
+        },
+        "except_variables": [],
+        "on_task_model": true,
+        "specific_model": {
+            "model_name": "densenet121",
+            "datasource_name": "imagenet",
+            "net_id": "densenet121",
+            "datasource_params": {
+                "path": "/ens/home01/c/camila.serena/imagenet",
+                "batch_size": 40
+            },
+            "model_params": {}
+        }
+    },
+    "defense_data": null,
+    "exec_time": "0h 0m 30s",
+    "result": {
+        "total": 1560,
+        "correct": 509,
+        "adversarial": 697,
+        "accuracy": "32.63%",
+        "accuracy_v": 0.3262820512820513,
+        "top_5_accuracy": "62.95%",
+        "top_5_accuracy_v": 0.6294871794871795,
+        "c_total": 1206,
+        "c_accuracy": "42.21%",
+        "c_fr": "57.79%",
+        "c_accuracy_v": 0.42205638474295193,
+        "correct_avg_confidence": "70.65%",
+        "dataset_norm_0": 150528,
+        "dataset_avg_norm_2": 195.62695938501602,
+        "dataset_avg_norm_inf": 0.9788637356880384,
+        "adv_avg_norm_0": 149338.99139167863,
+        "adv_avg_norm_2": 23.720004110459445,
+        "adv_disimilarity": 0.12797263944508183,
+        "adv_avg_norm_inf": 0.06320409752546116,
+        "adv_inf_disimilarity": 0.06498951198722916,
+        "fooled_avg_confidence": "53.60%"
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "task_data": {
+        "task_name": "accuracy",
+        "skip_no_attack": true,
+        "task_params": {},
+        "exec_multi": false,
+        "attack_on_defense": true,
+        "plot_results": false,
+        "plot_keys": [],
+        "plot_together": true,
+        "skip_no_defense": false,
+        "skip_no_attack_variables": false
+    },
+    "net_data": {
+        "model_name": "resnet14_cifar",
+        "datasource_name": "cifar10",
+        "net_id": "resnet14_cifar",
+        "datasource_params": {
+            "batch_size": 256
+        },
+        "model_params": {}
+    },
+    "attack_data": {
+        "attack_name": "fgsm",
+        "attack_params": {
+            "eps": 0.2
+        },
+        "except_variables": [],
+        "on_task_model": true
+    },
+    "defense_data": null,
+    "exec_time": "0h 1m 58s",
+    "result": {
+        "total": 10000,
+        "correct": 909,
+        "adversarial": 7506,
+        "accuracy": "9.09%",
+        "accuracy_v": 0.0909,
+        "c_total": 8415,
+        "c_accuracy": "10.80%",
+        "c_fr": "89.20%",
+        "c_accuracy_v": 0.10802139037433155,
+        "correct_avg_confidence": "70.39%",
+        "dataset_norm_0": 3072,
+        "dataset_avg_norm_2": 29.099360897827147,
+        "dataset_avg_norm_inf": 0.9425203971862793,
+        "adv_avg_norm_0": 3052.509992006395,
+        "adv_avg_norm_2": 5.425030087014373,
+        "adv_disimilarity": 0.19731155999526956,
+        "adv_avg_norm_inf": 0.10000002331775631,
+        "adv_inf_disimilarity": 0.10694301269736063,
+        "fooled_avg_confidence": "70.07%"
+    }
+}

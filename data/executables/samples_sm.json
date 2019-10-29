@@ -1,0 +1,108 @@
+{
+  "config": {
+    "batch_size_factor": 1,
+    "device_ids": ["cuda:0", "cuda:1"],
+    "results_path": "proyect_results/samples_sm"
+  },
+  "tasks": [
+    {
+      "task_data": {
+        "task_name": "samples",
+        "skip_no_attack": true,
+        "task_params": {
+          "limit_samples": 32
+        }
+      },
+      "nets": [
+        {
+          "model_name": "resnet14_mnist",
+          "datasource_name": "mnist",
+          "net_id": "resnet14_mnist",
+          "datasource_params": {
+            "batch_size": 32
+          }
+        }
+      ],
+      "attacks": [
+        {
+          "attack_name": "fgsm",
+          "attack_params": {
+            "eps": 0.5
+          }
+        }
+      ],
+      "defenses": []
+    },
+    {
+      "task_data": {
+        "task_name": "samples",
+        "skip_no_attack": true,
+        "task_params": {
+          "limit_samples": 32
+        }
+      },
+      "nets": [
+        {
+          "model_name": "resnet14_cifar",
+          "datasource_name": "cifar10",
+          "net_id": "resnet14_cifar",
+          "datasource_params": {
+            "batch_size": 16
+          }
+        }
+      ],
+      "attacks": [
+        {
+          "attack_name": "fgsm",
+          "attack_params": {
+            "eps": 0.2
+          }
+        }
+      ],
+      "defenses": []
+    },
+    {
+      "task_data": {
+        "task_name": "samples",
+        "skip_no_attack": true,
+        "exec_multi": true,
+        "task_params": {
+          "limit_samples": 32
+        }
+      },
+      "nets": [
+        {
+          "model_name": "resnet50",
+          "datasource_name": "imagenet",
+          "net_id": "resnet50",
+          "datasource_params": {
+            "path": "/media/diegoirigaray/38F686EEF686ABA6/Diego/Facultad/ILSVRC2012_img_val",
+            "batch_size": 4
+          }
+        }
+      ],
+      "attacks": [
+        {
+          "attack_name": "fgsm",
+          "attack_params": {
+            "eps": 0.2776571810245514
+          }
+        },
+        {
+          "attack_name": "i_fgsm",
+          "attack_params": {
+            "eps": 0.2776571810245514,
+            "min_alpha": 0.01751
+          }
+        },
+        {
+          "attack_name": "mi_fgsm",
+          "attack_params": {
+            "eps": 0.2776571810245514
+          }
+        }
+      ],
+      "defenses": []
+    }
+  ]
+}

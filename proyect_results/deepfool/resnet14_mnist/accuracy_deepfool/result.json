@@ -1,0 +1,63 @@
+{
+    "task_data": {
+        "task_name": "accuracy",
+        "skip_no_attack": true,
+        "task_params": {
+            "limit_samples": 10000
+        },
+        "description": "Accuracy base para deepfool y fgsm con parametros por defecto en mnist.",
+        "exec_multi": false,
+        "attack_on_defense": true,
+        "plot_results": false,
+        "plot_keys": [],
+        "plot_together": true,
+        "skip_no_defense": false,
+        "skip_no_attack_variables": false
+    },
+    "net_data": {
+        "model_name": "resnet14_mnist",
+        "datasource_name": "mnist",
+        "net_id": "resnet14_mnist",
+        "datasource_params": {
+            "batch_size": 100
+        },
+        "model_params": {}
+    },
+    "attack_data": {
+        "attack_name": "deepfool",
+        "attack_params": {},
+        "except_variables": [],
+        "on_task_model": true
+    },
+    "defense_data": null,
+    "exec_time": "1h 31m 31s",
+    "result": {
+        "total": 10000,
+        "correct": 1,
+        "adversarial": 9895,
+        "accuracy": 0.0001,
+        "avg_confidence": {
+            "correct": 0.4175320863723755,
+            "adversarial": 0.5013904160956894
+        },
+        "clean_correct": {
+            "total": 9896,
+            "adversarial": 9895,
+            "accuracy": 0.00010105092966855295
+        },
+        "clean_avg_norm": {
+            "0": 784,
+            "2": 9.295949603271485,
+            "inf": 0.9995996139526367
+        },
+        "adv_avg_norm": {
+            "0": 573.4977261243052,
+            "2": 0.8947127308973223,
+            "inf": 0.20887789058829873
+        },
+        "adv_disimilarity": {
+            "2": 0.09860645928366008,
+            "inf": 0.20896238834945888
+        }
+    }
+}

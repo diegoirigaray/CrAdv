@@ -1,0 +1,151 @@
+{
+    "config": {
+      "multi_gpu": true,
+      "device_ids": ["cuda:0", "cuda:1"],
+      "batch_size_factor": 1
+    },
+    "tasks": [
+      {
+        "task_data": {
+          "task_name": "accuracy",
+          "skip_no_attack": true,
+          "task_params": {
+            "limit_samples": 1000,
+            "top_k": 5
+          }
+        },
+        "nets": [
+          {
+            "model_name": "resnet14_mnist",
+            "datasource_name": "mnist",
+            "net_id": "resnet14_mnist",
+            "datasource_params": {
+              "batch_size": 100,
+              "shuffle": false,
+              "round": true
+            }
+          }
+        ],
+        "attacks": [
+          {"attack_name": "deepfool"},
+          {
+            "attack_name": "carlini_wagner",
+            "attack_params": {
+              "max_iterations": 1000,
+              "target_class": "random"
+            }
+          }
+        ],
+        "defenses": []
+      },
+      {
+        "task_data": {
+          "task_name": "accuracy",
+          "skip_no_attack": true,
+          "task_params": {
+            "limit_samples": 1000,
+            "top_k": 5
+          }
+        },
+        "nets": [
+          {
+            "model_name": "resnet14_cifar",
+            "datasource_name": "cifar10",
+            "net_id": "resnet14_cifar",
+            "datasource_params": {
+              "batch_size": 200,
+          "round": true
+            }
+          }
+        ],
+        "attacks": [
+          {"attack_name": "deepfool"},
+          {
+            "attack_name": "carlini_wagner",
+            "attack_params": {
+              "max_iterations": 1000,
+              "target_class": "random",
+              "abort_early": false
+            }
+          }
+        ],
+        "defenses": []
+      },
+      {
+        "task_data": {
+          "task_name": "accuracy",
+          "skip_no_attack": false,
+          "task_params": {
+            "limit_samples": 1400,
+            "top_k": 5
+          }
+        },
+        "nets": [
+          {
+            "model_name": "resnet50",
+            "datasource_name": "imagenet",
+            "net_id": "resnet50",
+            "datasource_params": {
+              "batch_size": 35,
+          "round": true
+            }
+          }
+        ],
+        "attacks": [
+          {"attack_name": "deepfool"},
+          {
+            "attack_name": "carlini_wagner",
+            "attack_params": {
+              "max_iterations": 400,
+              "target_class": "random",
+              "random_classes": "586 647 530 544 824 593 9 487 286 494 83 714 765 486 257 548 281 106 990 897 669 604 696 72 650 141 108 748 912 188 598 621 264 54 216 104 372 952 361 363 812 741 156 88 574 115 552 797 443 127 326 366 436 774 483 406 928 815 187 621 722 370 912 643 950 709 773 136 74 723 354 331 657 900 461 345 147 68 643 616 608 28 707 410 224 87 369 426 486 475 187 410 55 208 887 803 860 107 524 898" 
+            }
+          }
+        ],
+        "defenses": []
+      },
+      {
+        "task_data": {
+          "task_name": "samples",
+          "exec_multi": true,
+          "task_params": {
+            "limit_samples": 8
+          }
+        },
+        "nets": [
+            {
+                "model_name": "resnet14_mnist",
+                "datasource_name": "mnist",
+                "net_id": "resnet14_mnist",
+                "datasource_params": {
+                    "batch_size": 4,
+                    "round": true
+                }
+            },
+            {
+                "model_name": "resnet14_cifar",
+                "datasource_name": "cifar10",
+                "net_id": "resnet14_cifar",
+                "datasource_params": {
+                    "batch_size": 4,
+                    "round": true
+                }
+            },
+            {
+                "model_name": "resnet50",
+                "datasource_name": "imagenet",
+                "datasource_params": {
+                    "batch_size": 4,
+                    "round": true
+                },
+                "net_id": "resnet50"
+            }
+        ],
+        "attacks": [
+          {"attack_name": "deepfool"},
+          {"attack_name": "carlini_wagner"}
+        ]
+      }
+    ]
+  }
+  

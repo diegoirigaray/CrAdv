@@ -1,0 +1,63 @@
+{
+    "task_data": {
+        "task_name": "accuracy",
+        "skip_no_attack": true,
+        "task_params": {
+            "limit_samples": 1100,
+            "round": true
+        },
+        "exec_multi": false,
+        "attack_on_defense": true,
+        "plot_results": false,
+        "plot_keys": [],
+        "plot_together": true,
+        "skip_no_defense": false,
+        "skip_no_attack_variables": false
+    },
+    "net_data": {
+        "model_name": "resnet14_mnist",
+        "datasource_name": "mnist",
+        "net_id": "resnet14_mnist",
+        "datasource_params": {
+            "batch_size": 480
+        },
+        "model_params": {}
+    },
+    "attack_data": {
+        "attack_name": "deepfool",
+        "attack_params": {},
+        "except_variables": [],
+        "on_task_model": true
+    },
+    "defense_data": null,
+    "exec_time": "0h 4m 18s",
+    "result": {
+        "total": 1440,
+        "correct": 85,
+        "adversarial": 1339,
+        "accuracy": 0.059027777777777776,
+        "avg_confidence": {
+            "correct": 0.4827556946698357,
+            "adversarial": 0.502582826393589
+        },
+        "clean_correct": {
+            "total": 1424,
+            "adversarial": 1339,
+            "accuracy": 0.059691011235955056
+        },
+        "clean_avg_norm": {
+            "0": 784,
+            "2": 9.298627048068576,
+            "inf": 0.9995615641276042
+        },
+        "adv_avg_norm": {
+            "0": 484.21583271097836,
+            "2": 0.8986152495084369,
+            "inf": 0.20877154395151173
+        },
+        "adv_disimilarity": {
+            "2": 0.09888324637836801,
+            "inf": 0.20886591711179636
+        }
+    }
+}
