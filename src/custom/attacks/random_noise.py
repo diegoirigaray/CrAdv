@@ -6,15 +6,14 @@ from src.utils.functions import rescale_adversarial
 
 class RandomNoise(Attack):
     '''
-    Random noise used for comparison.
+    Random noise attack used for comparison.
 
     Extra Args:
-        eps (float): value used to rescale the sign tensor. If not given, searches the
-            minimum epsilon that manages to fool the network.
-        try_eps_min (float): minimum epsilon tested when `eps` is not given.
-        try_eps_max (float): maximum epsilon tested when `eps` is not given.
-        try_eps_step (float): step used to increment the tested epsilon between
-            `try_eps_min` and `try_eps_max` when `eps` is not given.
+        eps (float): factor used to scale the random perturbation (uniform (-1,1))
+        max_2_norm (float, optional): if given, the random perturbation is rescaled
+            as to have this value as euclidean norm.
+        dissimilarity (float, optional) if given, the random perturbation is rescaled
+            as to have this value as normalized dissimilarity (euclidean norm).
     '''
     def __init__(self, model, datasource, eps=0.2, max_2_norm=None, dissimilarity=None, **kwargs):
         super().__init__(model, datasource, **kwargs)

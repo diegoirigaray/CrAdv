@@ -2,6 +2,7 @@ import math
 import torch
 from src.base import Attack
 from src.utils.functions import to_neg_one_one, from_neg_one_one
+import random
 
 
 class CarliniWagner(Attack):
@@ -18,13 +19,20 @@ class CarliniWagner(Attack):
             each c const.
         abort_early (bool): flag to enable early abort when not enough progress.
         c_init (float): initial value for the c const.
+        c_const (float): if given, uses this this value as the c const and doesn't
+            perform binary search.
         learning_rate (float): learning rate using on the optimizer.
         confidence (float): constant used to regulate the confidence of the attack.
+        target_class (string): This arguments  allows to specify how to target the
+            attack. If not given, targets to the most likely incorrect class,
+            otherwise it can have the value of `random` or `least_likely`.
+        random_classes (list of int): when `target_class` is `random`, this argument
+            let's you set the list of posible classes to choose from.
     """
 
     def __init__(self, model, datasource, bin_search_steps=10, max_iterations=1000,
                  abort_early=True, c_init=1e-2, c_const=None, learning_rate=1e-2,
-                 confidence=0, least_likely=False, **kwargs):
+                 confidence=0, target_class=None, random_classes=None, **kwargs):
 
         super().__init__(model, datasource, **kwargs)
         self.bin_search_steps = bin_search_steps
@@ -36,7 +44,8 @@ class CarliniWagner(Attack):
         self.c_const = c_const
         self.learning_rate = learning_rate
         self.confidence = confidence
-        self.least_likely = least_likely
+        self.target_class = target_class
+        self.random_classes = random_classes
 
         # Boolean that indicates if the images are already in the range [-1, 1]
         self.images_ready = (len(self.datasource.min) == len(self.datasource.max) == 1 and
@@ -72,19 +81,32 @@ class CarliniWagner(Attack):
 
     def __call__(self, images, labels):
         logits = self.model(images)
-        if self.least_likely:
-            # If least_likely is True, targets the classes with less probability
-            _, indexes = torch.topk(logits, 1, dim=1, largest=False)
-            target_labels = [i.item() for i in indexes]
-        else:
-            # Otherwise use the second most likely classes that aren't correct
+        target_labels = []
+
+        if (self.target_class is None):
+            # Use the second most likely classes that aren't correct
             _, indexes = torch.topk(logits, 2, dim=1)
-            target_labels = []
             for iter, ind in enumerate(indexes):
                 correct = labels[iter].item()
                 first = ind[0].item()
                 second = ind[1].item()
                 target_labels.append(first if first != correct else second)
+        elif (self.target_class == "random"):
+            classes = list(range(self.num_classes))
+            if self.random_classes:
+                classes = [int(n) for n in self.random_classes.split()]
+            for iter, ind in enumerate(logits):
+                correct = labels[iter].item()
+                random_class = random.choice(classes)
+                while random_class == correct:
+                    random_class = random.choice(classes)
+                target_labels.append(random_class)
+        elif (self.target_class == "least_likely"):
+            # If least_likely is True, targets the classes with less probability
+            _, indexes = torch.topk(logits, 1, dim=1, largest=False)
+            target_labels = [i.item() for i in indexes]
+        else:
+            raise NotImplementedError("Targetted method not implemented.")
 
         if self.c_const:
             bin_steps = 1

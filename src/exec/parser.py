@@ -274,6 +274,7 @@ class AttackIterable(object):
             base.defense.Defense instance).
         datasource (base.datasource.DataSource): datasource of the current task execution.
         attacks (object): `attacks` array from `schemas.task_schema`
+        config (dict): configuration dictionary as returned by `Parser.parse_config`
 
     Returns:
         Iterator of `src.base.attack.Attack` instances.

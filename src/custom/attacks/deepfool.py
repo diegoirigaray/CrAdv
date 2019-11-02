@@ -17,6 +17,8 @@ class DeepFool(Attack):
         max_iter (int): limit of iterations.
         max_2_norm (float): max euclidean norm for the perturbation. If given, the
             perturbation is constrained in each iteration to its value.
+        dissimilarity (float): when given, restricts the perturbation sizes as to
+            have this value as the normalized dissimilarity.
     '''
     def __init__(self, model, datasource, eps=0.02, k_classes=10, max_iter=50,
                  max_2_norm=None, dissimilarity=None, **kwargs):

@@ -15,6 +15,11 @@ class I_FGSM(Attack):
         iterations (int): number of iterations.
         max_2_norm (float): max euclidean norm for the perturbation. If given, the
             perturbation is constrained in each iteration to its value.
+        dissimilarity (float): when given, restricts the perturbation sizes as to
+            have this value as the normalized dissimilarity.
+        least_likely (bool): if `True`, uses the least likely class of the clean
+            images as adversarial targets.
+        min_alpha (float, optional): minimum value used as alpha in the algorithm.
     '''
     def __init__(self, model, datasource, eps=0.1, alpha=None, iterations=10, max_2_norm=None,
                  dissimilarity=None, least_likely=False, min_alpha=None, **kwargs):

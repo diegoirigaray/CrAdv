@@ -9,8 +9,8 @@ class MI_FGSM(Attack):
 
     Extra Args:
         eps (float): value used to limit the perturbation size (max inf norm).
-        alpha (float): value used to rescale the sign vector at each iteration.
-        iterations (int): number of iterations.
+        iterations (int): number of steps in the gradient descent.
+        decay_factor (float): decay factor used with the velocity vector.
         max_2_norm (float): max euclidean norm for the perturbation. If given, the
             perturbation is constrained in each iteration to its value.
     '''

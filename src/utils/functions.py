@@ -6,6 +6,19 @@ from time import time
 WEIGHTS_PATH = "data/weights"
 
 
+class Timer():
+    def start(self):
+        self.start_time = time()
+
+    def stop(self):
+        end_time = time()
+        return time_to_string(self.start_time, end_time)
+
+
+def to_percentage(f):
+    return "{:.2f}%".format(100 * f)
+
+
 def save_weights(net, net_id):
     '''
     Saves the net weights given a net_id
@@ -64,18 +77,6 @@ def time_to_string(start, end):
     return "{}h {}m {}s".format(total // 3600, (total % 3600) // 60, total % 60)
 
 
-def to_percentage(f):
-    return "{:.2f}%".format(100 * f)
-
-
-class Timer():
-    def start(self):
-        self.start_time = time()
-
-    def stop(self):
-        end_time = time()
-        return time_to_string(self.start_time, end_time)
-
 def rescale_to_norm(tensor, norm, down_only=False):
     '''
     Rescales the given images to have the given norm.
@@ -122,6 +123,31 @@ def rescale_to_norm(tensor, norm, down_only=False):
 
 def rescale_adversarial(adversarial, u_clean, u_clean_norm, datasource, dissimilarity=None,
                         norm=None, down_only=False):
+    '''
+    Rescales perturbations in a batch of images.
+
+    Rescales the perturbations of a batch of images to either an specified norm
+    or normalized dissimilarity.
+    The norm or normalized dissimilarity is obtained in the unnormalized range [0,1]
+    but the adversarial batch is expected and returned in the normmalized one.
+
+    Args:
+        adversarial (Tensor): batch of adversarial normalized images.
+        u_clean (Tensor): batch of the corresponding clean unnormalized images.
+        u_clean_norm (Tensor): norms of the `u_clean` images, expected as argument
+            for improve performance.
+        datasource (DataSource): corresponding DataSource instance, used to
+            normalize and unnormalize images.
+        dissimilarity (numeric, optional): if given, the perturbations will be
+            rescaled to get this value as normalized dissimilarity.
+        norm (numeric, optional): if `dissimilarity` is not given, the perturbations
+            are rescaled to this `norm` value (euclidean).
+        down_only (bool): if `True`, the perturbations will only be down scaled.
+
+    Returns:
+        Tensor: adversarial images fromm the `adversarial` input but with their
+            perturbations scaled to match the given `dissimilarity` or `norm`.
+    '''
     results = []
     if dissimilarity:
         scaled_norms = u_clean_norm * dissimilarity
